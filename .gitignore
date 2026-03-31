@@ -1,0 +1,23 @@
+# LaTeX build artifacts
+docs/documentazione/*/latex/build/
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Node / webapp
+webapp/node_modules/
+webapp/dist/
+webapp/.env

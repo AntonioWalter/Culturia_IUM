@@ -1,0 +1,54 @@
+name: LaTeX Continuous Integration
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+    paths:
+      - 'docs/**/*.tex'
+      - 'docs/**/*.png'
+      - 'docs/**/*.jpg'
+      - 'docs/**/*.bib'
+      - 'docs/**/Makefile'
+      - '.github/workflows/latex-ci.yml'
+  pull_request:
+    branches: [ "main", "dev" ]
+    paths:
+      - 'docs/**/*.tex'
+      - 'docs/**/*.png'
+      - 'docs/**/*.jpg'
+      - 'docs/**/*.bib'
+      - 'docs/**/Makefile'
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 📦 Install TeX Live and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-lang-italian \
+            texlive-fonts-recommended \
+            cm-super \
+            latexmk
+
+      - name: 🔨 Compile all LaTeX documents dynamically
+        run: |
+          # Cerca tutti i file chiamati "Makefile" dentro la cartella "docs"
+          # Per ognuno che trova, entra nella sua cartella ed esegue "make
+          # In questo modo, che ci sia assignment1, assignment2 o doc_finale, li compila tutti in automatico!
+          find docs -name "Makefile" -execdir make \;
+
+      - name: 📤 Upload PDF Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Documenti-Compilati-PDF
+          # Raccoglie tutti i PDF generati al livello della root degli assignment
+          path: docs/documentazione/*/*.pdf
+          retention-days: 14
