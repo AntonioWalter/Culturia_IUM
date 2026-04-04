@@ -1,0 +1,21 @@
+\section{Descrizione del problema}
+
+Il dominio scelto per il nostro progetto è quello dell'\textbf{Arte e Cultura}. Il problema che intendiamo affrontare riguarda il progressivo allontanamento dei cittadini — in particolare dei giovani — dalla fruizione attiva dei luoghi culturali di prossimità, con un'attenzione specifica ai piccoli borghi e ai territori meno centrali.
+
+I dati ISTAT 2023 confermano la gravità del fenomeno: solo una minoranza della popolazione italiana ha visitato musei, mostre o siti archeologici nell'ultimo anno. I giovani, pur essendo i fruitori più attivi, mostrano una partecipazione occasionale e non strutturata, mentre le fasce più anziane — portatrici di memoria storica — restano ai margini per barriere fisiche e digitali. A ciò si aggiunge un forte divario territoriale tra Centro-Nord e Mezzogiorno, e una partecipazione drasticamente inferiore nei piccoli comuni rispetto alle aree metropolitane, nonostante i borghi custodiscano patrimoni di altissimo valore identitario.
+
+Il problema non è la mancanza di cultura, ma la sua \textbf{scarsa accessibilità, visibilità e capacità di coinvolgimento}. Le piattaforme esistenti (Italia.it, Google Arts \& Culture, Smartify) offrono esperienze prevalentemente passive, non orientate alla valorizzazione territoriale né alla partecipazione attiva dell'utente.
+
+La nostra proposta consiste nell'evolvere \textbf{Culturia} — piattaforma partecipativa per la valorizzazione del patrimonio culturale — integrandovi funzionalità di \textbf{Realtà Aumentata (AR)} e \textbf{Intelligenza Artificiale (IA)}. Il sistema si articola su due direttrici tecnologiche complementari:
+
+\begin{itemize}
+    \item \textbf{Realtà Aumentata:} l'utente, giunto presso un sito culturale, potrà inquadrare con lo smartphone monumenti, facciate storiche o opere d'arte e ricevere in sovraimpressione contenuti digitali contestuali — ricostruzioni dell'aspetto originario di un edificio, narrazioni animate, informazioni stratificate per epoca — oppure seguire percorsi guidati AR lungo itinerari tematici.
+
+    \item \textbf{Intelligenza Artificiale:} un assistente conversazionale accompagnerà l'utente durante l'esperienza, rispondendo a domande in linguaggio naturale, generando approfondimenti calibrati sul profilo culturale del visitatore e suggerendo percorsi ottimali in base a posizione, tempo disponibile e preferenze pregresse.
+\end{itemize}
+
+Le due tecnologie operano in sinergia: l'IA adatta dinamicamente i contenuti AR al profilo dell'utente e può riconoscere automaticamente un sito culturale da una fotografia, arricchendolo con informazioni contestuali senza alcun input manuale. Queste funzionalità si integrano nell'ecosistema Culturia già progettato: il sistema di \textbf{gamification} (punti e badge per esperienze completate), il \textbf{diario delle visite} (ricordi multimediali arricchiti dai contenuti AR e dalle interazioni con l'IA) e la \textbf{validazione geolocalizzata} della presenza.
+
+Il valore aggiunto di questa combinazione è duplice. Da un lato, rende fruibili contenuti altrimenti inaccessibili: un tempio in rovina può essere ``ricostruito'' virtualmente, un affresco deteriorato restituito nei colori originali. Dall'altro, supera la fruizione passiva offrendo un dialogo attivo e personalizzato con il patrimonio — un aspetto cruciale per i piccoli borghi privi di guide, segnaletica o personale, dove l'assistente IA diventa guida turistica e il tour AR supplisce all'assenza di infrastrutture.
+
+Questa visione è coerente con i principi della Convenzione di Faro, che pone al centro il diritto di ogni cittadino a partecipare attivamente alla vita culturale della propria comunità. Culturia, attraverso AR e IA, traduce quel principio in uno strumento concreto di \textit{empowerment}: non si limita a mostrare il patrimonio, ma abilita l'utente a viverlo, interpretarlo e condividerlo.
