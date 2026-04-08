@@ -1,2 +1,73 @@
 \section{Analisi dei task}
-% TODO
+
+Dall'identificazione degli intenti dei quattro personaggi elaborati, è stato possibile delineare i principali \textit{macro-task} operativi e cognitivi che ogni utente persegue all'interno dell'applicazione \textbf{Culturia}. Spostando il focus dalle singole funzioni dell'interfaccia (es.\ l'apertura della mappa) agli obiettivi di fruizione, il peso di ciascuna operazione varia drasticamente in base al dominio concettuale e ai bisogni del soggetto.
+
+La tabella seguente classifica i task distinguendo tra:
+\begin{itemize}[nosep, leftmargin=1.2em]
+    \item[\textcolor{culturiaRed}{\textbullet}] \textbf{Necessario (N)} --- indispensabile per il raggiungimento del goal primario;
+    \item[\textcolor{culturiaRed}{\textbullet}] \textbf{Facoltativo (F)} --- arricchisce l'esperienza ma non la vincola.
+\end{itemize}
+
+% ─── Tabella Task ──────────────────────────────────────────────
+\renewcommand{\arraystretch}{1.35}
+
+\begin{table}[ht!]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{
+    >{\raggedright\arraybackslash}p{3.4cm}
+    >{\raggedright\arraybackslash}p{2.8cm}
+    c c c
+    >{\raggedright\arraybackslash}p{6.8cm}
+}
+\toprule
+\rowcolor{culturiaRed}
+\textcolor{culturiaWhite}{\textbf{Macro-task}} &
+\textcolor{culturiaWhite}{\textbf{Persona}} &
+\textcolor{culturiaWhite}{\textbf{Tipo}} &
+\textcolor{culturiaWhite}{\textbf{Freq.}} &
+\textcolor{culturiaWhite}{\textbf{Import.}} &
+\textcolor{culturiaWhite}{\textbf{Motivazione}} \\
+\midrule
+
+% ── TASK 1 ─────────────────────────────────────────────────────
+\rowcolor{culturiaBeige}
+\multirow{4}{3.4cm}{\textbf{1.\ Pianificazione e gestione del percorso} \\ {\footnotesize(Ottimizzazione del tempo)}}
+  & Marco {\footnotesize(T.\ Esterno)}     & \textbf{N} & Alta  & Alta  & Indispensabile per intercettare gli highlight nel poco tempo concesso.  \\
+\rowcolor{culturiaBeige}
+  & Elena {\footnotesize(T.\ Int.\ Assiduo)} & \textbf{F} & Bassa & Bassa & Conosce già perfettamente la planimetria e le sale del sito.            \\
+\rowcolor{culturiaBeige}
+  & Matteo {\footnotesize(T.\ Int.\ Nuovo)}  & \textbf{N} & Media & Media & Necessario per colmare il disorientamento logistico iniziale.           \\
+\rowcolor{culturiaBeige}
+  & Giovanni {\footnotesize(Impiegato)}      & \textbf{N} & Alta  & Alta  & Lo usa visivamente per indicare percorsi e uscite d'emergenza ai turisti. \\
+
+\midrule
+
+% ── TASK 2 ─────────────────────────────────────────────────────
+\multirow{4}{3.4cm}{\textbf{2.\ Comprensione a fondo e adattamento del livello di dettaglio}}
+  & Marco {\footnotesize(T.\ Esterno)}     & \textbf{F} & Bassa & Bassa & Preferisce infarinature veloci, evitando densi blocchi testuali.         \\
+  & Elena {\footnotesize(T.\ Int.\ Assiduo)} & \textbf{N} & Alta  & Alta  & È il cuore della sua visita: cerca retroscena, dettagli occulti e restauri. \\
+  & Matteo {\footnotesize(T.\ Int.\ Nuovo)}  & \textbf{N} & Media & Alta  & Decisivo se l'IA funge da mediatore per abbattere i tecnicismi eccessivi. \\
+  & Giovanni {\footnotesize(Impiegato)}      & \textbf{N} & Media & Alta  & Ispeziona l'app per diagnosticare e validare l'autenticità dei contenuti. \\
+
+\midrule
+
+% ── TASK 3 ─────────────────────────────────────────────────────
+\rowcolor{culturiaBeige}
+\multirow{4}{3.4cm}{\textbf{3.\ Trasformare la passività in esplorazione tematica gratificante}}
+  & Marco {\footnotesize(T.\ Esterno)}     & \textbf{F} & Bassa & Bassa & Tempo insufficiente per concedersi deviazioni o logiche di gamification. \\
+\rowcolor{culturiaBeige}
+  & Elena {\footnotesize(T.\ Int.\ Assiduo)} & \textbf{N} & Alta  & Media & Ottimo pretesto per trasformare sale note in esplorazioni trasversali.   \\
+\rowcolor{culturiaBeige}
+  & Matteo {\footnotesize(T.\ Int.\ Nuovo)}  & \textbf{N} & Alta  & Alta  & Il sistema a tappe e le ricompense sono lo stimolo ludico per superare l'apatia. \\
+\rowcolor{culturiaBeige}
+  & Giovanni {\footnotesize(Impiegato)}      & \textbf{F} & Bassa & Bassa & Non partecipa attivamente, ma ne suggerisce l'avvio per intrattenere i visitatori. \\
+
+\bottomrule
+\end{tabular}%
+}
+\vspace{0.15cm}
+\caption{Analisi dei macro-task orientati agli obiettivi: \textbf{N}\,=\,Necessario, \textbf{F}\,=\,Facoltativo.}
+\label{tab:task_analysis}
+\end{table}
