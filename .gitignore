@@ -16,8 +16,13 @@ Thumbs.db
 *.swp
 *.swo
 *~
+.idea/
+*.iml
 
 # Node / webapp
 webapp/node_modules/
 webapp/dist/
 webapp/.env
+
+# LaTeX local outputs
+docs/documentazione/*/latex/*.pdf

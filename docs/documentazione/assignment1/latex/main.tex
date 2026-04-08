@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
 \usepackage{geometry}
-\geometry{margin=2.5cm, headheight=14pt}
+\geometry{margin=2.5cm, headheight=33pt}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{booktabs}
@@ -15,24 +15,73 @@
 \usepackage{fancyhdr}
 \usepackage{parskip}
 
-% ─── Metadata ───────────────────────────────────────────────
-\title{\textbf{Culturia --- Assignment 1}\\[0.3em]
-       \large Interazione Uomo-Macchina}
-\author{Antonio Walter De Fusco \and [Nome Secondo Componente]}
-\date{\today}
+% ─── Palette Colori ─────────────────────────────────────────
+\definecolor{culturiaRed}{HTML}{78241c}
+\definecolor{culturiaBeige}{HTML}{eee5d7}
+\definecolor{culturiaBlack}{HTML}{000000}
+\definecolor{culturiaWhite}{HTML}{ffffff}
+
+\pagecolor{culturiaBeige}
+\color{culturiaBlack}
+
+\titleformat{\section}{\color{culturiaRed}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\color{culturiaRed}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=culturiaRed,
+    filecolor=culturiaRed,      
+    urlcolor=culturiaRed,
+}
 
 % ─── Header / Footer ───────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small Culturia --- Assignment 1}
-\fancyhead[R]{\small IUM}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[height=0.8cm]{img/LogoCulturia.png}} \hspace{0.2cm} \textbf{\color{culturiaRed}Culturia}}
+\fancyhead[R]{\footnotesize De Fusco --- di Palma}
 \fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{culturiaRed}\leaders\hrule height \headrulewidth\hfill}}
 
 % ─── Document ──────────────────────────────────────────────
 \begin{document}
 
-\maketitle
-\thispagestyle{empty}
+\begin{titlepage}
+    \centering
+    
+    % Logo Università
+    \includegraphics[height=3.5cm]{img/logo_unisa.png}\par\vspace{1cm}
+    
+    {\scshape\LARGE Università degli Studi di Salerno \par}
+    \vspace{0.5cm}
+    {\scshape\Large Corso di Interazione Uomo-Macchina\par}
+    \vspace{0.5cm}
+    {\large Docente: \textbf{Prof.ssa Giuliana Vitiello}\par}
+    
+    \vspace{2cm}
+    
+    % Logo Progetto
+    \includegraphics[height=4cm]{img/LogoCulturia.png}\par\vspace{0.5cm}
+    
+    {\huge\bfseries Culturia\par}
+    \vspace{0.5cm}
+    {\Large\itshape Assignment 1 --- User \& Task Analysis\par}
+    
+    \vfill
+    
+    % Autori
+    \begin{flushleft}
+        \large
+        \textbf{Componenti del gruppo:}\\
+        Antonio Walter De Fusco --- \texttt{0512119006}\\
+        Gabriele di Palma --- \texttt{0512119257}
+    \end{flushleft}
+    
+    \vspace{1.5cm}
+    
+    {\large \today\par}
+\end{titlepage}
+
 \newpage
 
 \tableofcontents
@@ -40,41 +89,11 @@
 
 % ─── Sezioni (da compilare) ────────────────────────────────
 
-\section{Struttura di gestione del gruppo}
-% TODO
-
-\section{Descrizione del problema}
-
-Il dominio scelto per il nostro progetto è quello dell'\textbf{Arte e Cultura}. Il problema che intendiamo affrontare riguarda il progressivo allontanamento dei cittadini — in particolare dei giovani — dalla fruizione attiva dei luoghi culturali di prossimità, con un'attenzione specifica ai piccoli borghi e ai territori meno centrali.
-
-I dati ISTAT 2023 confermano la gravità del fenomeno: solo una minoranza della popolazione italiana ha visitato musei, mostre o siti archeologici nell'ultimo anno. I giovani, pur essendo i fruitori più attivi, mostrano una partecipazione occasionale e non strutturata, mentre le fasce più anziane — portatrici di memoria storica — restano ai margini per barriere fisiche e digitali. A ciò si aggiunge un forte divario territoriale tra Centro-Nord e Mezzogiorno, e una partecipazione drasticamente inferiore nei piccoli comuni rispetto alle aree metropolitane, nonostante i borghi custodiscano patrimoni di altissimo valore identitario.
-
-Il problema non è la mancanza di cultura, ma la sua \textbf{scarsa accessibilità, visibilità e capacità di coinvolgimento}. Le piattaforme esistenti (Italia.it, Google Arts \& Culture, Smartify) offrono esperienze prevalentemente passive, non orientate alla valorizzazione territoriale né alla partecipazione attiva dell'utente.
-
-La nostra proposta consiste nell'evolvere \textbf{Culturia} — piattaforma partecipativa per la valorizzazione del patrimonio culturale — integrandovi funzionalità di \textbf{Realtà Aumentata (AR)} e \textbf{Intelligenza Artificiale (IA)}. Il sistema si articola su due direttrici tecnologiche complementari:
-
-\begin{itemize}
-    \item \textbf{Realtà Aumentata:} l'utente, giunto presso un sito culturale, potrà inquadrare con lo smartphone monumenti, facciate storiche o opere d'arte e ricevere in sovraimpressione contenuti digitali contestuali — ricostruzioni dell'aspetto originario di un edificio, narrazioni animate, informazioni stratificate per epoca — oppure seguire percorsi guidati AR lungo itinerari tematici.
-
-    \item \textbf{Intelligenza Artificiale:} un assistente conversazionale accompagnerà l'utente durante l'esperienza, rispondendo a domande in linguaggio naturale, generando approfondimenti calibrati sul profilo culturale del visitatore e suggerendo percorsi ottimali in base a posizione, tempo disponibile e preferenze pregresse.
-\end{itemize}
-
-Le due tecnologie operano in sinergia: l'IA adatta dinamicamente i contenuti AR al profilo dell'utente e può riconoscere automaticamente un sito culturale da una fotografia, arricchendolo con informazioni contestuali senza alcun input manuale. Queste funzionalità si integrano nell'ecosistema Culturia già progettato: il sistema di \textbf{gamification} (punti e badge per esperienze completate), il \textbf{diario delle visite} (ricordi multimediali arricchiti dai contenuti AR e dalle interazioni con l'IA) e la \textbf{validazione geolocalizzata} della presenza.
-
-Il valore aggiunto di questa combinazione è duplice. Da un lato, rende fruibili contenuti altrimenti inaccessibili: un tempio in rovina può essere ``ricostruito'' virtualmente, un affresco deteriorato restituito nei colori originali. Dall'altro, supera la fruizione passiva offrendo un dialogo attivo e personalizzato con il patrimonio — un aspetto cruciale per i piccoli borghi privi di guide, segnaletica o personale, dove l'assistente IA diventa guida turistica e il tour AR supplisce all'assenza di infrastrutture.
-
-Questa visione è coerente con i principi della Convenzione di Faro, che pone al centro il diritto di ogni cittadino a partecipare attivamente alla vita culturale della propria comunità. Culturia, attraverso AR e IA, traduce quel principio in uno strumento concreto di \textit{empowerment}: non si limita a mostrare il patrimonio, ma abilita l'utente a viverlo, interpretarlo e condividerlo.
-
-\section{Sviluppo personaggi e obiettivi}
-% TODO
-
-\section{Personas}
-% TODO
-
-\section{Analisi dei task}
-% TODO
-
-\section{Obiettivi di Empowerment}
-% TODO
+\input{chapters/1_gestione_gruppo}
+\input{chapters/2_descrizione_problema}
+\input{chapters/3_sviluppo_personaggi}
+\input{chapters/4_personas}
+\input{chapters/5_analisi_task}
+\input{chapters/6_obiettivi_empowerment}
 
 \end{document}
