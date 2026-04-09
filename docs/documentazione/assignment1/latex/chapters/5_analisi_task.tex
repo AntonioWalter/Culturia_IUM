@@ -1,0 +1,261 @@
+\section{Analisi dei task}
+
+Spostando il focus dalle singole funzionalità dell'interfaccia (come l'apertura della mappa) ai reali obiettivi di fruizione, il peso di ogni operazione varia sensibilmente in base alle necessità di ciascun profilo. La tabella seguente classifica i macro-task distinguendo tra:
+\begin{itemize}[nosep, leftmargin=1.2em]
+    \item[\textcolor{culturiaRed}{\textbullet}] \textbf{Necessario (N)} --- indispensabile per il raggiungimento del goal primario;
+    \item[\textcolor{culturiaRed}{\textbullet}] \textbf{Facoltativo (F)} --- arricchisce l'esperienza senza esserne vincolante.
+\end{itemize}
+
+% ─── Tabella Task ──────────────────────────────────────────────
+\renewcommand{\arraystretch}{1.35}
+
+\begin{table}[ht!]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{
+    >{\raggedright\arraybackslash}p{4.2cm}
+    >{\raggedright\arraybackslash}p{2.8cm}
+    c c c
+    >{\raggedright\arraybackslash}p{6.0cm}
+}
+\toprule
+\rowcolor{culturiaRed}
+\textcolor{culturiaWhite}{\textbf{Macro-task}} &
+\textcolor{culturiaWhite}{\textbf{Persona}} &
+\textcolor{culturiaWhite}{\textbf{Tipo}} &
+\textcolor{culturiaWhite}{\textbf{Freq.}} &
+\textcolor{culturiaWhite}{\textbf{Import.}} &
+\textcolor{culturiaWhite}{\textbf{Motivazione}} \\
+\midrule
+
+% ── TASK 1 ─────────────────────────────────────────────────────
+\rowcolor{culturiaBeige}
+\textbf{1.\ Pianificazione e gestione del percorso} \newline {\footnotesize(Ottimizzazione del tempo)}
+  & Marco {\footnotesize(T.\ Esterno)}     & \textbf{N} & Alta  & Alta  & Fondamentale per individuare rapidamente le opere principali nel limitato tempo a disposizione.  \\
+\rowcolor{culturiaBeige}
+  & Elena {\footnotesize(T.\ Int.\ Assiduo)} & \textbf{F} & Bassa & Bassa & Conosce già approfonditamente la planimetria e la disposizione delle sale.            \\
+\rowcolor{culturiaBeige}
+  & Matteo {\footnotesize(T.\ Int.\ Nuovo)}  & \textbf{N} & Media & Media & Indispensabile per orientarsi ed evitare il senso di smarrimento iniziale.           \\
+\rowcolor{culturiaBeige}
+  & Giovanni {\footnotesize(Impiegato)}      & \textbf{N} & Alta  & Alta  & Utilizza l'app come supporto visivo per indicare percorsi e uscite d'emergenza ai turisti. \\
+
+\midrule
+
+% ── TASK 2 ─────────────────────────────────────────────────────
+\textbf{2.\ Comprensione a fondo e adattamento del livello di dettaglio}
+  & Marco {\footnotesize(T.\ Esterno)}     & \textbf{F} & Bassa & Bassa & Predilige informazioni rapide e coincise, evitando testi troppo densi.         \\
+  & Elena {\footnotesize(T.\ Int.\ Assiduo)} & \textbf{N} & Alta  & Alta  & Rappresenta il nucleo della visita: cerca retroscena, dettagli nascosti e restauri. \\
+  & Matteo {\footnotesize(T.\ Int.\ Nuovo)}  & \textbf{N} & Media & Alta  & Cruciale per abbattere i tecnicismi attraverso la mediazione dell'IA. \\
+  & Giovanni {\footnotesize(Impiegato)}      & \textbf{N} & Media & Alta  & Verifica l'accuratezza e l'autenticità dei contenuti digitali esposti. \\
+
+\midrule
+
+% ── TASK 3 ─────────────────────────────────────────────────────
+\rowcolor{culturiaBeige}
+\textbf{3.\ Trasformare la passività in esplorazione tematica gratificante}
+  & Marco {\footnotesize(T.\ Esterno)}     & \textbf{F} & Bassa & Bassa & Tempo limitato per concedersi deviazioni o logiche di gamification. \\
+\rowcolor{culturiaBeige}
+  & Elena {\footnotesize(T.\ Int.\ Assiduo)} & \textbf{N} & Alta  & Media & Ottimo incentivo per trasformare percorsi già noti in esplorazioni tematiche.   \\
+\rowcolor{culturiaBeige}
+  & Matteo {\footnotesize(T.\ Int.\ Nuovo)}  & \textbf{N} & Alta  & Alta  & La struttura a tappe e il sistema di ricompense stimolano la curiosità e vincono l'apatia. \\
+\rowcolor{culturiaBeige}
+  & Giovanni {\footnotesize(Impiegato)}      & \textbf{F} & Bassa & Bassa & Pur non partecipando, suggerisce queste attività per intrattenere i visitatori. \\
+
+\bottomrule
+\end{tabular}%
+}
+\vspace{0.15cm}
+\caption{Analisi dei macro-task orientati agli obiettivi: \textbf{N}\,=\,Necessario, \textbf{F}\,=\,Facoltativo.}
+\label{tab:task_analysis}
+\end{table}
+
+\vspace{0.8cm}
+
+\subsection{Decomposizione dei Task Principali (Sub-Tasks)}
+
+Al fine di calare l'analisi a un livello più concreto ed empirico, come richiesto dall'adozione dello \textit{User-Centered Design}, i macro-task sono stati formalmente spacchettati in \textbf{Sotto-Task} (Sub-Tasks). Questi descrivono i veri e propri passi operativi e le interazioni che gli utenti effettueranno sull'interfaccia.
+
+% --- TABELLA 2 (Pianificazione) ---
+\begin{table}[H]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.0}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{
+    >{\raggedright\arraybackslash}p{4.2cm}
+    |>{\raggedright\arraybackslash}p{2.8cm}
+    |>{\centering\arraybackslash}p{1.2cm}
+    |>{\centering\arraybackslash}p{1.2cm}
+    |>{\centering\arraybackslash}p{1.2cm}
+    |>{\raggedright\arraybackslash}p{6.0cm}
+}
+\toprule
+\rowcolor{culturiaRed}
+\textcolor{culturiaWhite}{\textbf{Sotto-task}} &
+\textcolor{culturiaWhite}{\textbf{Persona}} &
+\textcolor{culturiaWhite}{\textbf{Tipo}} &
+\textcolor{culturiaWhite}{\textbf{Freq.}} &
+\textcolor{culturiaWhite}{\textbf{Import.}} &
+\textcolor{culturiaWhite}{\textbf{Motivazione}} \\
+\midrule
+
+\textbf{1.1 Scansione RFID} \newline {\footnotesize(Avvio contestuale)}
+  & Marco & \textbf{N} & Alta & Alta & Avvio immediato del tour senza navigazione manuale. \\\hline
+  & Elena & \textbf{F} & Bassa & Bassa & Funzionalità non prioritaria durante le visite abituali. \\\hline
+  & Matteo & \textbf{N} & Alta & Alta & Punto di ingresso intuitivo per chi non conosce il sistema. \\\hline
+  & Giovanni & \textbf{N} & Alta & Alta & Attivazione rapida dei tour per supportare i visitatori. \\
+
+\midrule
+
+\rowcolor{culturiaBeige}
+\textbf{1.2 Filtraggio accessibile profilato} 
+  & Marco & \textbf{N} & Alta & Alta & Fondamentale per ottimizzare il percorso nel poco tempo concesso. \\\hline
+\rowcolor{culturiaBeige}
+  & Elena & \textbf{F} & Bassa & Bassa & Conosce già i percorsi principali privi di barriere. \\\hline
+\rowcolor{culturiaBeige}
+  & Matteo & \textbf{N} & Media & Alta & Supporto cruciale all'orientamento tramite indicazioni AR. \\\hline
+\rowcolor{culturiaBeige}
+  & Giovanni & \textbf{N} & Alta & Alta & Guida sicura ed inclusiva per disabili e famiglie. \\
+
+\midrule
+
+\textbf{1.3 Sincronizzazione tour in simultanea}
+  & Marco & \textbf{N} & Media & Alta & Coerente coordinazione della visita con il proprio gruppo. \\\hline
+  & Elena & \textbf{F} & Bassa & Bassa & Visita solitamente in forma individuale. \\\hline
+  & Matteo & \textbf{F} & Media & Media & Utile nel caso di visite in compagnia di colleghi. \\\hline
+  & Giovanni & \textbf{F} & Bassa & Media & Suggerito per fluidificare il traffico di gruppi nelle sale. \\
+
+\bottomrule
+\end{tabular}%
+}
+\caption{Analisi dei Sotto-task: Pianificazione e gestione del percorso.}
+\label{tab:subtasks_1}
+\end{table}
+
+\vspace{0.3cm}
+
+% --- TABELLA 3 (Comprensione) ---
+\begin{table}[H]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.0}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{
+    >{\raggedright\arraybackslash}p{4.2cm}
+    |>{\raggedright\arraybackslash}p{2.8cm}
+    |>{\centering\arraybackslash}p{1.2cm}
+    |>{\centering\arraybackslash}p{1.2cm}
+    |>{\centering\arraybackslash}p{1.2cm}
+    |>{\raggedright\arraybackslash}p{6.0cm}
+}
+\toprule
+\rowcolor{culturiaRed}
+\textcolor{culturiaWhite}{\textbf{Sotto-task}} &
+\textcolor{culturiaWhite}{\textbf{Persona}} &
+\textcolor{culturiaWhite}{\textbf{Tipo}} &
+\textcolor{culturiaWhite}{\textbf{Freq.}} &
+\textcolor{culturiaWhite}{\textbf{Import.}} &
+\textcolor{culturiaWhite}{\textbf{Motivazione}} \\
+\midrule
+
+\rowcolor{culturiaBeige}
+\textbf{2.1 Scansione visiva ad overlay (AR)}
+  & Marco & \textbf{F} & Bassa & Bassa & Poco tempo per interagire con layer informativi complessi. \\\hline
+\rowcolor{culturiaBeige}
+  & Elena & \textbf{N} & Alta & Alta & Indispensabile per scoprire dettagli e restauri nascosti. \\\hline
+\rowcolor{culturiaBeige}
+  & Matteo & \textbf{N} & Media & Alta & Stimolo visivo immediato per la comprensione dell'opera. \\\hline
+\rowcolor{culturiaBeige}
+  & Giovanni & \textbf{N} & Media & Alta & Ispezione per validare la corrispondenza con la realtà fisica. \\
+
+\midrule
+
+\textbf{2.2 Selezione "Tone of Voice" (IA)}
+  & Marco & \textbf{N} & Media & Alta & Predilige stile Storytelling per brevità e chiarezza. \\\hline
+  & Elena & \textbf{N} & Alta & Alta & Utilizza lo stile accademico per scopi di studio. \\\hline
+  & Matteo & \textbf{N} & Alta & Alta & Fondamentale per abbattere tecnicismi e godersi la visita. \\\hline
+  & Giovanni & \textbf{N} & Media & Alta & Monitoraggio della qualità informativa erogata. \\
+
+\midrule
+
+\rowcolor{culturiaBeige}
+\textbf{2.3 Interrogazione vocale dinamica}
+  & Marco & \textbf{F} & Bassa & Bassa & Preferisce non fermarsi per query vocali specifiche. \\\hline
+\rowcolor{culturiaBeige}
+  & Elena & \textbf{N} & Alta & Alta & Domande verticali su dettagli specifici dell'opera. \\\hline
+\rowcolor{culturiaBeige}
+  & Matteo & \textbf{N} & Media & Media & Interazione naturale senza navigazione manuale dei menu. \\\hline
+\rowcolor{culturiaBeige}
+  & Giovanni & \textbf{F} & Bassa & Bassa & Funzionalità non pertinente al ruolo di sorveglianza. \\
+
+\bottomrule
+\end{tabular}%
+}
+\caption{Analisi dei Sotto-task: Comprensione a fondo e adattamento del dettaglio.}
+\label{tab:subtasks_2}
+\end{table}
+
+\newpage
+
+% --- TABELLA 4 (Gamification) ---
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{
+    >{\raggedright\arraybackslash}p{4.2cm}
+    |>{\raggedright\arraybackslash}p{2.8cm}
+    |>{\centering\arraybackslash}p{1.2cm}
+    |>{\centering\arraybackslash}p{1.2cm}
+    |>{\centering\arraybackslash}p{1.2cm}
+    |>{\raggedright\arraybackslash}p{6.0cm}
+}
+\toprule
+\rowcolor{culturiaRed}
+\textcolor{culturiaWhite}{\textbf{Sotto-task}} &
+\textcolor{culturiaWhite}{\textbf{Persona}} &
+\textcolor{culturiaWhite}{\textbf{Tipo}} &
+\textcolor{culturiaWhite}{\textbf{Freq.}} &
+\textcolor{culturiaWhite}{\textbf{Import.}} &
+\textcolor{culturiaWhite}{\textbf{Motivazione}} \\
+\midrule
+
+\textbf{3.1 Dashboard e Progressioni}
+  & Marco & \textbf{F} & Bassa & Bassa & Nessun interesse per progressioni di lungo periodo. \\\hline
+  & Elena & \textbf{F} & Media & Bassa & Tracciamento facoltativo delle tappe completate. \\\hline
+  & Matteo & \textbf{N} & Alta & Alta & Motore per sconfiggere l'inerzia e l'apatia iniziale. \\\hline
+  & Giovanni & \textbf{F} & Bassa & Bassa & Non pertinente alla propria attività lavorativa. \\
+
+\midrule
+
+\rowcolor{culturiaBeige}
+\textbf{3.2 Rewarding tramite tap RFID}
+  & Marco & \textbf{F} & Bassa & Bassa & Poca attrattiva per i punti data la visita singola. \\\hline
+\rowcolor{culturiaBeige}
+  & Elena & \textbf{F} & Media & Bassa & Gradisce il riconoscimento ma non ne è dipendente. \\\hline
+\rowcolor{culturiaBeige}
+  & Matteo & \textbf{N} & Alta & Alta & Feedback immediato che rinforza l'esplorazione attiva. \\\hline
+\rowcolor{culturiaBeige}
+  & Giovanni & \textbf{F} & Bassa & Bassa & Nessuna utilità professionale specifica. \\
+
+\midrule
+
+\textbf{3.3 Liste di Missioni contestuali}
+  & Marco & \textbf{F} & Bassa & Bassa & Missioni troppo articolate per lo scarso tempo disponibile. \\\hline
+  & Elena & \textbf{N} & Media & Alta & Incentivo a esplorare zone del polo solitamente ignorate. \\\hline
+  & Matteo & \textbf{N} & Alta & Alta & Guida a tappe che struttura l'intera visita al museo. \\\hline
+  & Giovanni & \textbf{F} & Alta & Bassa & Suggerisce le missioni ai turisti per orientarli nelle sale. \\
+
+\bottomrule
+\end{tabular}%
+}
+\caption{Analisi dei Sotto-task: Trasformare la passività in esplorazione gratificante.}
+\label{tab:subtasks_3}
+\end{table}
+
+\vspace{0.6cm}
+
+\textbf{Nota sullo sviluppo iterativo:}\\
+L'elenco dei task qui riportato rappresenta una base progettuale preliminare. I questionari di analisi (rivolti sia ai turisti che agli addetti al settore) sono tuttora in fase di acquisizione: i feedback e le idee che emergeranno da questa fase di ascolto attivo degli stakeholder porteranno a integrazioni e modifiche dirette nel prossimo \textbf{Assignment 2}, seguendo la metodologia iterativa tipica dello \textit{User-Centered Design}.

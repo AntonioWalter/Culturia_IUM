@@ -5,34 +5,94 @@
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
 \usepackage{geometry}
-\geometry{margin=2.5cm, headheight=14pt}
+\geometry{margin=2.5cm, headheight=33pt}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{array}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{amsmath}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 \usepackage{parskip}
+\usepackage{float}
+\usepackage{caption}
 
-% ─── Metadata ───────────────────────────────────────────────
-\title{\textbf{Culturia --- Assignment 1}\\[0.3em]
-       \large Interazione Uomo-Macchina}
-\author{Antonio Walter De Fusco \and [Nome Secondo Componente]}
-\date{\today}
+% ─── Palette Colori ─────────────────────────────────────────
+\definecolor{culturiaRed}{HTML}{78241c}
+\definecolor{culturiaBeige}{HTML}{eee5d7}
+\definecolor{culturiaBlack}{HTML}{000000}
+\definecolor{culturiaWhite}{HTML}{ffffff}
+
+\pagecolor{culturiaBeige}
+\color{culturiaBlack}
+
+\titleformat{\section}{\color{culturiaRed}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\color{culturiaRed}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=culturiaRed,
+    filecolor=culturiaRed,      
+    urlcolor=culturiaRed,
+    citecolor=culturiaRed,
+}
 
 % ─── Header / Footer ───────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small Culturia --- Assignment 1}
-\fancyhead[R]{\small IUM}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[height=0.8cm]{img/LogoCulturia.png}} \hspace{0.2cm} \textbf{\color{culturiaRed}Culturia}}
+\fancyhead[R]{\footnotesize De Fusco --- di Palma}
 \fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{culturiaRed}\leaders\hrule height \headrulewidth\hfill}}
 
 % ─── Document ──────────────────────────────────────────────
 \begin{document}
 
-\maketitle
-\thispagestyle{empty}
+\begin{titlepage}
+    \centering
+    
+    % Logo Università
+    \includegraphics[height=3.5cm]{img/logo_unisa.png}\par\vspace{1cm}
+    
+    {\scshape\LARGE Università degli Studi di Salerno \par}
+    \vspace{0.5cm}
+    {\scshape\Large Corso di Interazione Uomo-Macchina\par}
+    \vspace{0.3cm}
+    {\large Docente: \textbf{Prof.ssa Giuliana Vitiello}\par}
+    
+    \vspace{1cm}
+    
+    % Logo Progetto
+    \includegraphics[height=4cm]{img/LogoCulturia.png}\par\vspace{0.5cm}
+    
+    {\huge\bfseries Culturia\par}
+    \vspace{0.5cm}
+    {\Large\itshape Assignment 1 --- User \& Task Analysis\par}
+    
+    \vfill
+    
+    % Autori
+    \begin{flushleft}
+        \large
+        \textbf{Componenti del gruppo:}\\
+        Antonio Walter De Fusco --- \texttt{0512119006}\\
+        Gabriele di Palma --- \texttt{0512119257}
+        
+        \vspace{0.4cm}
+        \textbf{Repository GitHub del progetto:}\\
+        \url{https://github.com/AntonioWalter/Culturia_IUM}
+    \end{flushleft}
+    
+    \vspace{0.8cm}
+    
+    {\large \today\par}
+\end{titlepage}
+
 \newpage
 
 \tableofcontents
@@ -40,22 +100,22 @@
 
 % ─── Sezioni (da compilare) ────────────────────────────────
 
-\section{Struttura di gestione del gruppo}
-% TODO
+\input{chapters/1_gestione_gruppo}
+\clearpage
+\input{chapters/2_descrizione_problema}
+\clearpage
+\input{chapters/3_sviluppo_personaggi}
+\clearpage
+\input{chapters/4_personas}
+\clearpage
+\input{chapters/5_analisi_task}
+\clearpage
+\input{chapters/6_obiettivi_empowerment}
+\clearpage
+\input{chapters/7_contributi}
 
-\section{Descrizione del problema}
-% TODO
-
-\section{Sviluppo personaggi e obiettivi}
-% TODO
-
-\section{Personas}
-% TODO
-
-\section{Analisi dei task}
-% TODO
-
-\section{Obiettivi di Empowerment}
-% TODO
+\clearpage
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
 
 \end{document}
