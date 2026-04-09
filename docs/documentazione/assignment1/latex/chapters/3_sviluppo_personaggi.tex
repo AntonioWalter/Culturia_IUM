@@ -1,20 +1,27 @@
 \section{Sviluppo personaggi e obiettivi}
 
-La progettazione dell'applicazione \textbf{Culturia} è stata guidata dalla necessità di soddisfare un'utenza variegata ma accomunata dalla medesima esperienza di fruizione base. Secondo le specifiche di progetto, gli attori principali del sistema non presentano differenze a livello \textit{funzionale}, ma esclusivamente \textit{concettuale}. Essi si interfacceranno con lo stesso applicativo e disporranno dei medesimi strumenti (consultazione della mappa, lettura delle schede informative, navigazione per categorie o ricerca), ma li adopereranno con fini, motivazioni e passioni diametralmente opposte.
+La progettazione dei personaggi per \textbf{Culturia} trae la sua origine dall'analisi preliminare condotta sui recenti dati ISTAT relativi alla partecipazione culturale. Tuttavia, per effettuare un'indagine più accurata sulle reali esigenze del mercato e sulle abitudini degli utenti sul territorio, abbiamo somministrato due questionari mirati a due segmenti ben distinti di utenza:
 
-Questa scelta architetturale consente di mantenere una piattaforma lineare e inclusiva, delegando alla flessibilità strutturale dei contenuti il compito di assecondare molteplici scenari d'uso. I tre macro-attori cardine del sistema sono: il Turista Esterno, il Turista Interno e l'Amministratore/Impiegato. Nel dettaglio, le analisi hanno imposto un'ulteriore suddivisione del "Turista Interno", generando due flussi distinti.
+\begin{itemize}
+    \item \textbf{Questionario per il turista medio:} ci ha permesso di convalidare e comprendere in maniera tangibile la necessità di una suddivisione dei bisogni tra il \textit{turista esterno} (che scopre la città per la prima volta) e il \textit{turista interno} (il cittadino o residente locale).
+    \item \textbf{Questionario per Pubbliche Amministrazioni e Addetti ai Lavori:} rivolto a chi opera attivamente nei siti culturali, essenziale per scoprire le prospettive di chi dovrà supportare, integrare o utilizzare il sistema sul campo professionale.
+\end{itemize}
+
+Al fine di tracciare le Personas definitive con dati concreti alla mano, ci siamo basati sui risultati dei questionari somministrati sia ai turisti~\cite{quest_turisti, excel_turisti} sia agli addetti ai lavori~\cite{quest_addetti, excel_addetti}, il cui materiale completo e i dati grezzi sono liberamente consultabili attraverso i link in bibliografia.
+
+L'analisi incrociata di questi due canali di indagine ci ha permesso di far emergere i tre macro-attori cardine del sistema: il Turista Esterno, il Turista Interno e l'Amministratore/Impiegato, con una ulteriore suddivisione per il Turista Interno dovuta all'elevata discrepanza di aspettative emersa dai dati.
 
 \subsection{Giustificazione delle scelte e dei Goal}
 
-\textbf{1. Turista Esterno}\\
+\textcolor{culturiaRed}{\textbf{1. Turista Esterno}}\\
 Questo utente rappresenta il visitatore che non possiede alcuna familiarità, o ne possiede molto scarsa, con il sito culturale e con la città ospitante. Costui ha spesso a disposizione un tempo di visita limitato e necessita di coordinate chiare.
 \begin{itemize}
     \item \textbf{Goal primario:} Orientarsi con disinvoltura, identificare e accedere rapidamente alle attrazioni di maggior pregio storico (i classici "must-see"), venendo a contatto con infarinature generali e intuitive.
     \item \textbf{Giustificazione:} Includere il turista esterno è imprescindibile per l'indotto. Considerare questo profilo impone all'app un elevato livello di \textit{learnability}: l'interfaccia non può ammettere frizioni all'apprendimento, consentendo panoramiche fruibili nel limitato tempo concesso per la visita.
 \end{itemize}
 
-\textbf{2. Turista Interno (Suddiviso in 2 Personas)}\\
-Costituisce il cittadino o abitante della zona. Egli gravita attivamente attorno al sito. L'identificazione del turista interno racchiude due macro-atteggiamenti antitetici:
+\textcolor{culturiaRed}{\textbf{2. Turista Interno (Suddiviso in 2 Personas)}}\\
+Costituisce il cittadino o abitante della zona. Egli gravita attivamente attorno al sito. L'identificazione del turista interno racchiude due macro-atteggiamenti opposti:
 \begin{itemize}
     \item \textit{Assiduo conoscitore:} Appassionato e avvezzo, padroneggia attivamente le planimetrie locali.
     \begin{itemize}
@@ -27,9 +34,9 @@ Costituisce il cittadino o abitante della zona. Egli gravita attivamente attorno
     \item \textbf{Giustificazione:} Disgiungere l'utenza interna nei due rami è stata una decisione progettuale oculata. Previene, da un lato, l'ostica banalizzazione di \textit{Culturia} (preservando sfide interessanti per i veterani) e al contempo accompagna per mano il locale esordiente non offrendogli interfacce da "snob elitario".
 \end{itemize}
 
-\textbf{3. Amministratore / Impiegato}\\
-Rappresenta l'operatore preposto al supporto sul posto (steward, custode o centralinista sul campo). Utilizza la \textit{medesima} veste grafica di \textit{Culturia} rivolta alla folla turistica, senza dashboard amministrative.
+\textcolor{culturiaRed}{\textbf{3. Amministratore / Ente Gestore}}\\
+Rappresenta l'operatore, l'ente turistico o il curatore preposto non solo all'assistenza sul posto, ma in primo luogo alla gestione attiva e digitale del patrimonio locale. Essendo un utente professionale, necessita di flussi di lavoro e privilegi nettamente separati rispetto alla folla turistica, orientati alla produttività.
 \begin{itemize}
-    \item \textbf{Goal primario:} Interfacciarsi per riscontri documentali logistici e ausiliari. Affiancare e veicolare l'utenza rintracciando dal tablet/smartphone percorsi, uscite d'emergenza o servizi igienici, ed elargire risposte rigorose e fulminee.
-    \item \textbf{Giustificazione:} Induce a progettare un'esperienza non rivolta in via esclusiva allo svago. L'impiegato usa l'app quale vero e proprio "attrezzo di servizio": esige correttezza puntuale dei capitoli, nomenclature aderenti allo stato fattuale delle teche, consolidando l'affidabilità del sistema ai massimi gradini.
+    \item \textbf{Goal primario:} Creare, configurare e gestire l'offerta del luogo culturale. Lo scopo fondamentale dell'amministratore è realizzare in autonomia i percorsi guidati in Realtà Aumentata e istruire l'Intelligenza Artificiale, agendo da autore dei contenuti senza doversi scontrare con barriere tecniche di programmazione.
+    \item \textbf{Giustificazione:} Analizzare questo attore induce a progettare il sistema non esclusivamente come strumento di svago (lato consumer), ma come un vero e proprio strumento di \textit{authoring} (lato publisher). Soddisfare l'amministratore è vitale per garantire il popolamento costante dell'app: egli esige flussi di creazione intuitivi, affidabilità estrema nella gestione operativa e processi fluidi per generare il materiale AR che verrà fruito dai turisti.
 \end{itemize}
