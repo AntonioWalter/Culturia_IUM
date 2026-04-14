@@ -1,3 +1,130 @@
-\section{Use Cases}
+\section{Casi d'Uso}
 
-% Inserire qui i casi d'uso
+I seguenti scenari descrivono le sequenze di azioni che le Personas dell'Assignment~1 intraprenderanno per raggiungere i propri obiettivi tramite Culturia. Ogni caso d'uso è radicato nella realtà dei contesti d'uso e nei macro-task già identificati, mantenendo la flessibilità necessaria rispetto alle scelte implementative finali.
+
+% ─── UC1 ─────────────────────────────────────────────────────────
+\subsection*{UC1 — Visita lampo guidata}
+
+\noindent
+\begingroup
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
+  \toprule
+  Persona     & Marco, 46 anni --- Turista Esterno \\
+  Task        & T1: Pianificazione e gestione del percorso \\
+  Contesto    & Marco si trova in città per un weekend in famiglia. Dispone di circa 90~minuti prima di riprendere il viaggio di ritorno. Entra nel complesso culturale per la prima volta e non ha alcuna familiarità con la disposizione delle sale. \\
+  \bottomrule
+\end{tabularx}
+\endgroup
+
+\vspace{0.3cm}
+\noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
+\begin{enumerate}[nosep, leftmargin=1.4em]
+  \item All'ingresso, Marco avvicina lo smartphone al tag RFID posizionato sul pannello di benvenuto: l'app si attiva contestualmente e rileva la sua posizione di ingresso.
+  \item Sur richiesta, indica il tempo disponibile per la visita; sulla base di questo dato l'app propone un itinerario ottimizzato focalizzato sulle cinque opere di maggior rilievo storico.
+  \item Notando la presenza della figlia piccola in passeggino, Marco applica il filtro ``accessibile senza scale'': l'itinerario si ricalcola automaticamente escludendo i piani superiori.
+  \item Durante il percorso, segue le indicazioni spaziali in realtà aumentata che sovrappongono frecce direzionali all'inquadratura della fotocamera, guidandolo da una sala all'altra senza necessità di interpretare mappe bidimensionali.
+  \item Alla penultima tappa, condivide il tour con lo smartphone della moglie, così entrambi ricevono in sincronia le medesime indicazioni e possono dividersi brevemente senza perdersi.
+  \item Al termine del percorso l'app conferma le opere visitate e segnala il tempo residuo, suggerendo eventualmente una sosta ai servizi igienici prima dell'uscita.
+\end{enumerate}
+
+\vspace{0.15cm}
+\noindent\textbf{\color{culturiaRed}Risultato atteso:}
+Marco raggiunge le \textit{highlight} del sito nei tempi previsti, senza alcun senso di disorientamento, grazie alla pianificazione adattiva e alla guida AR. La visita risulta soddisfacente nonostante il tempo limitato.
+
+\vspace{0.5cm}
+
+% ─── UC2 ─────────────────────────────────────────────────────────
+\subsection*{UC2 — Approfondimento tematico di un'opera}
+
+\noindent
+\begingroup
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
+  \toprule
+  Persona     & Elena, 26 anni --- Turista Interna (Visitatrice Assidua) \\
+  Task        & T2: Comprensione a fondo e adattamento del livello di dettaglio \\
+  Contesto    & Elena approfitta di un tranquillo mercoledì pomeriggio per tornare al polo culturale e studiare da vicino i recenti restauri di un affresco medievale nella sala nord-est, su cui sta conducendo una ricerca universitaria. \\
+  \bottomrule
+\end{tabularx}
+\endgroup
+
+\vspace{0.3cm}
+\noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
+\begin{enumerate}[nosep, leftmargin=1.4em]
+  \item Elena si posiziona di fronte all'affresco e attiva la modalità di scansione visiva inquadrando l'opera con la fotocamera: l'app riconosce l'opera e sovrappone in overlay le annotazioni relative agli interventi di restauro, evidenziando le campiture ricomposte rispetto agli strati originali.
+  \item Seleziona il tono di voce ``Accademico'' per ricevere le descrizioni con il rigore terminologico della storia dell'arte, coerente con il suo percorso di laurea magistrale.
+  \item Incuriosita da una figura secondaria parzialmente danneggiata nell'angolo inferiore destro, formula una domanda vocale al Cicerone IA chiedendone l'identità iconografica e il ruolo narrativo nella scena.
+  \item Il Cicerone risponde con una spiegazione dettagliata, citando le fonti storico-artistiche di riferimento; collega inoltre quella figura a un'opera iconograficamente affine conservata in un'altra ala del complesso.
+  \item Elena segue il rimando suggerito: si sposta nella sala indicata, dove ripete la scansione AR per confrontare i due soggetti e costruire il filo conduttore della propria ricerca.
+\end{enumerate}
+
+\vspace{0.15cm}
+\noindent\textbf{\color{culturiaRed}Risultato atteso:}
+Elena ottiene informazioni che superano ampiamente il contenuto delle targhe informative ufficiali, scoprendo retroscena e connessioni tematiche trasversali che alimentano il suo lavoro accademico. L'app si rivela uno strumento di studio attivo, non un semplice catalogo.
+
+\vspace{0.5cm}
+
+% ─── UC3 ─────────────────────────────────────────────────────────
+\subsection*{UC3 — Prima visita gamificata}
+
+\noindent
+\begingroup
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
+  \toprule
+  Persona     & Matteo, 34 anni --- Turista Interno (Prima Visita) \\
+  Task        & T3 + T1: Esplorazione gamificata e pianificazione del percorso \\
+  Contesto    & Matteo, in un giorno libero, decide finalmente di visitare il polo culturale insieme a una collega. Conosce il sito per fama ma non ci è mai entrato. Teme di annoiarsi, ma è curioso e aperto all'esperienza. \\
+  \bottomrule
+\end{tabularx}
+\endgroup
+
+\vspace{0.3cm}
+\noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
+\begin{enumerate}[nosep, leftmargin=1.4em]
+  \item All'avvio, Matteo seleziona il profilo ``Prima Visita'': l'app imposta automaticamente un tono di voce narrativo e informale, e presenta una dashboard con una barra di progressione e un elenco di missioni contestuali (es.\ \textit{``Il Drago Nascosto''}, \textit{``Il Chiostro Segreto''}).
+  \item Scegliendo la prima missione, viene guidato con indicazioni di massima verso un cortile interno poco frequentato dai turisti frettolosi; lungo il tragitto riceve micro-narrazioni audio che contestualizzano storicamente il luogo senza appesantire la visita.
+  \item Giunto all'obiettivo, avvicina lo smartphone al tag RFID vicino all'opera per registrare il passaggio: riceve un feedback visivo animato e un badge digitale che testimonia la scoperta.
+  \item Motivato dal progresso mostrato in dashboard, Matteo propone alla collega di affrontare la missione successiva, esplorando spontaneamente zone del complesso che non avrebbe visitato seguendo un itinerario standard.
+  \item Al termine della visita, l'app mostra un riepilogo delle tappe completate, i badge sbloccati e visualizza le missioni ancora aperte, invitandolo esplicitamente a tornare per completare la collezione.
+\end{enumerate}
+
+\vspace{0.15cm}
+\noindent\textbf{\color{culturiaRed}Risultato atteso:}
+Matteo supera la barriera dell'apatia iniziale grazie alla struttura a tappe e al sistema di ricompense. La visita si trasforma in un'esperienza piacevole e coinvolgente che lo motiva a tornare, ribaltando l'abitudine di rimandare indefinitamente.
+
+\vspace{0.5cm}
+
+% ─── UC4 ─────────────────────────────────────────────────────────
+\subsection*{UC4 — Assistenza rapida al visitatore}
+
+\noindent
+\begingroup
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
+  \toprule
+  Persona     & Giovanni, 55 anni --- Impiegato del polo culturale \\
+  Task        & T1 + T2: Navigazione assistita e verifica dell'accuratezza dei contenuti \\
+  Contesto    & Durante il turno pomeridiano, un visitatore anziano si avvicina a Giovanni chiedendo dove si trovi una specifica opera e come raggiungerla evitando le scale, poiché si muove con difficoltà. \\
+  \bottomrule
+\end{tabularx}
+\endgroup
+
+\vspace{0.3cm}
+\noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
+\begin{enumerate}[nosep, leftmargin=1.4em]
+  \item Giovanni apre l'app e digita il nome dell'opera nella ricerca rapida: il sistema localizza l'opera sulla planimetria del complesso in pochi secondi.
+  \item Applica il filtro ``senza barriere architettoniche'': l'app calcola il percorso privo di scale e indica gli ascensori e le rampe disponibili.
+  \item Mostra la mappa animata al visitatore sullo schermo del proprio smartphone, orientandosi rispetto all'ingresso corrente per indicare la direzione corretta in modo immediato e visivo.
+  \item Prima di congedare il visitatore, Giovanni consulta brevemente la scheda dell'opera per verificare che le informazioni visualizzate corrispondano all'allestimento attuale della sala, controllandone la coerenza con la realtà espositiva.
+  \item Soddisfatto dell'accuratezza, suggerisce al visitatore di attivare lui stesso l'app per seguire le indicazioni AR lungo il tragitto in autonomia.
+\end{enumerate}
+
+\vspace{0.15cm}
+\noindent\textbf{\color{culturiaRed}Risultato atteso:}
+Giovanni fornisce assistenza precisa in meno di un minuto, senza interrompere il flusso di sorveglianza. La corrispondenza tra i contenuti digitali e la realtà espositiva rafforza la sua fiducia nell'app, spingendolo a promuoverne attivamente l'utilizzo tra i visitatori.
