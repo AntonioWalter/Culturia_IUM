@@ -1,6 +1,6 @@
 \section{Casi d'Uso}
 
-I seguenti scenari descrivono le sequenze di azioni che le Personas dell'Assignment~1 intraprenderanno per raggiungere i propri obiettivi tramite Culturia. Ogni caso d'uso è radicato nella realtà dei contesti d'uso e nei macro-task già identificati, mantenendo la flessibilità necessaria rispetto alle scelte implementative finali.
+I seguenti scenari descrivono le sequenze di azioni che le Personas dell'Assignment~1 intraprenderanno per raggiungere i propri obiettivi tramite Culturia. Ogni caso d'uso è radicato nella realtà dei contesti d'uso e nei sotto-task già identificati, mantenendo la flessibilità necessaria rispetto alle scelte implementative finali.
 
 % ─── UC1 ─────────────────────────────────────────────────────────
 \subsection*{UC1 — Visita lampo guidata}
@@ -12,7 +12,7 @@ I seguenti scenari descrivono le sequenze di azioni che le Personas dell'Assignm
 \begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
   \toprule
   Persona     & Marco, 46 anni --- Turista Esterno \\
-  Task        & T1: Pianificazione e gestione del percorso \\
+  Task        & 1.1 Scansione RFID, 1.2 Filtraggio accessibile profilato, 1.3 Sincronizzazione tour in simultanea \\
   Contesto    & Marco si trova in città per un weekend in famiglia. Dispone di circa 90~minuti prima di riprendere il viaggio di ritorno. Entra nel complesso culturale per la prima volta e non ha alcuna familiarità con la disposizione delle sale. \\
   \bottomrule
 \end{tabularx}
@@ -21,12 +21,12 @@ I seguenti scenari descrivono le sequenze di azioni che le Personas dell'Assignm
 \vspace{0.3cm}
 \noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
 \begin{enumerate}[nosep, leftmargin=1.4em]
-  \item All'ingresso, Marco avvicina lo smartphone al tag RFID posizionato sul pannello di benvenuto: l'app si attiva contestualmente e rileva la sua posizione di ingresso.
-  \item Sur richiesta, indica il tempo disponibile per la visita; sulla base di questo dato l'app propone un itinerario ottimizzato focalizzato sulle cinque opere di maggior rilievo storico.
-  \item Notando la presenza della figlia piccola in passeggino, Marco applica il filtro ``accessibile senza scale'': l'itinerario si ricalcola automaticamente escludendo i piani superiori.
-  \item Durante il percorso, segue le indicazioni spaziali in realtà aumentata che sovrappongono frecce direzionali all'inquadratura della fotocamera, guidandolo da una sala all'altra senza necessità di interpretare mappe bidimensionali.
-  \item Alla penultima tappa, condivide il tour con lo smartphone della moglie, così entrambi ricevono in sincronia le medesime indicazioni e possono dividersi brevemente senza perdersi.
-  \item Al termine del percorso l'app conferma le opere visitate e segnala il tempo residuo, suggerendo eventualmente una sosta ai servizi igienici prima dell'uscita.
+  \item \textbf{[Sotto-task 1.1]} All'ingresso, Marco esegue la scansione RFID avvicinando lo smartphone al pannello di benvenuto: l'app avvia contestualmente il percorso rilevando la sua posizione.
+  \item Sulla base del tempo disponibile indicato, l'app propone un itinerario ottimizzato focalizzato sulle opere di maggior rilievo.
+  \item \textbf{[Sotto-task 1.2]} Notando la presenza della figlia in passeggino, Marco attiva il filtraggio accessibile profilato: l'itinerario si ricalcola per escludere i piani superiori e le scale.
+  \item Durante il percorso, segue agevolmente le indicazioni spaziali AR che lo guidano da una sala all'altra.
+  \item \textbf{[Sotto-task 1.3]} Alla penultima tappa, sfrutta la sincronizzazione del tour in simultanea per condividere l'itinerario con lo smartphone della moglie, permettendo loro di dividersi brevemente mantenendo gli stessi riferimenti spaziali.
+  \item Al termine, l'app conferma il completamento della visita entro il tempo limite prefissato.
 \end{enumerate}
 
 \vspace{0.15cm}
@@ -45,7 +45,7 @@ Marco raggiunge le \textit{highlight} del sito nei tempi previsti, senza alcun s
 \begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
   \toprule
   Persona     & Elena, 26 anni --- Turista Interna (Visitatrice Assidua) \\
-  Task        & T2: Comprensione a fondo e adattamento del livello di dettaglio \\
+  Task        & 2.1 Scansione visiva ad overlay (AR), 2.2 Selezione "Tone of Voice" (IA), 2.3 Interrogazione vocale dinamica \\
   Contesto    & Elena approfitta di un tranquillo mercoledì pomeriggio per tornare al polo culturale e studiare da vicino i recenti restauri di un affresco medievale nella sala nord-est, su cui sta conducendo una ricerca universitaria. \\
   \bottomrule
 \end{tabularx}
@@ -54,11 +54,11 @@ Marco raggiunge le \textit{highlight} del sito nei tempi previsti, senza alcun s
 \vspace{0.3cm}
 \noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
 \begin{enumerate}[nosep, leftmargin=1.4em]
-  \item Elena si posiziona di fronte all'affresco e attiva la modalità di scansione visiva inquadrando l'opera con la fotocamera: l'app riconosce l'opera e sovrappone in overlay le annotazioni relative agli interventi di restauro, evidenziando le campiture ricomposte rispetto agli strati originali.
-  \item Seleziona il tono di voce ``Accademico'' per ricevere le descrizioni con il rigore terminologico della storia dell'arte, coerente con il suo percorso di laurea magistrale.
-  \item Incuriosita da una figura secondaria parzialmente danneggiata nell'angolo inferiore destro, formula una domanda vocale al Cicerone IA chiedendone l'identità iconografica e il ruolo narrativo nella scena.
-  \item Il Cicerone risponde con una spiegazione dettagliata, citando le fonti storico-artistiche di riferimento; collega inoltre quella figura a un'opera iconograficamente affine conservata in un'altra ala del complesso.
-  \item Elena segue il rimando suggerito: si sposta nella sala indicata, dove ripete la scansione AR per confrontare i due soggetti e costruire il filo conduttore della propria ricerca.
+  \item \textbf{[Sotto-task 2.1]} Elena si posiziona di fronte all'affresco e attiva la scansione visiva ad overlay (AR) inquadrandolo: l'app riconosce l'opera e sovrappone i layer evidenziando le campiture ricomposte del restauro.
+  \item \textbf{[Sotto-task 2.2]} Dalle impostazioni IA, effettua la selezione del Tone of Voice "Accademico" per fruire di descrizioni adeguate al proprio rigore universitario.
+  \item \textbf{[Sotto-task 2.3]} Incuriosita da una figura secondaria in basso a destra, esegue un'interrogazione vocale dinamica chiedendo alla guida intelligente spiegazioni più verticali sul ruolo narrativo del soggetto.
+  \item Il sistema Cicerone risponde esponendo dettagli archivistici e proponendo un collegamento iconografico con un'altra ala del complesso culturale.
+  \item Elena si reca nella sala suggerita, ripetendo la scansione per confrontare visivamente i dipinti.
 \end{enumerate}
 
 \vspace{0.15cm}
@@ -77,7 +77,7 @@ Elena ottiene informazioni che superano ampiamente il contenuto delle targhe inf
 \begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
   \toprule
   Persona     & Matteo, 34 anni --- Turista Interno (Prima Visita) \\
-  Task        & T3 + T1: Esplorazione gamificata e pianificazione del percorso \\
+  Task        & 3.1 Dashboard e Progressioni, 3.2 Rewarding tramite tap RFID, 3.3 Liste di Missioni contestuali \\
   Contesto    & Matteo, in un giorno libero, decide finalmente di visitare il polo culturale insieme a una collega. Conosce il sito per fama ma non ci è mai entrato. Teme di annoiarsi, ma è curioso e aperto all'esperienza. \\
   \bottomrule
 \end{tabularx}
@@ -86,11 +86,11 @@ Elena ottiene informazioni che superano ampiamente il contenuto delle targhe inf
 \vspace{0.3cm}
 \noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
 \begin{enumerate}[nosep, leftmargin=1.4em]
-  \item All'avvio, Matteo seleziona il profilo ``Prima Visita'': l'app imposta automaticamente un tono di voce narrativo e informale, e presenta una dashboard con una barra di progressione e un elenco di missioni contestuali (es.\ \textit{``Il Drago Nascosto''}, \textit{``Il Chiostro Segreto''}).
-  \item Scegliendo la prima missione, viene guidato con indicazioni di massima verso un cortile interno poco frequentato dai turisti frettolosi; lungo il tragitto riceve micro-narrazioni audio che contestualizzano storicamente il luogo senza appesantire la visita.
-  \item Giunto all'obiettivo, avvicina lo smartphone al tag RFID vicino all'opera per registrare il passaggio: riceve un feedback visivo animato e un badge digitale che testimonia la scoperta.
-  \item Motivato dal progresso mostrato in dashboard, Matteo propone alla collega di affrontare la missione successiva, esplorando spontaneamente zone del complesso che non avrebbe visitato seguendo un itinerario standard.
-  \item Al termine della visita, l'app mostra un riepilogo delle tappe completate, i badge sbloccati e visualizza le missioni ancora aperte, invitandolo esplicitamente a tornare per completare la collezione.
+  \item \textbf{[Sotto-task 3.1 \& 3.3]} All'avvio, Matteo accede alla sua dashboard di progressione e attiva una specifica lista di missioni contestuali (es.\ \textit{``Il Drago Nascosto''}), impostando automaticamente un profilo narrativo per la visita.
+  \item Guidato con indicazioni di massima verso un cortile interno dalla prima sfida, riceve narrazioni storiche a step che non appesantiscono la camminata.
+  \item \textbf{[Sotto-task 3.2]} Trovata la scultura, posiziona lo smartphone per riscattare il rewarding tramite tap RFID: la convalida genera un feedback visivo e lo sblocco di un badge digitale.
+  \item Motivato dal costante progresso di missione mostrato nella dashboard, propone alla collega di aggredire il task successivo deviando dai percorsi standardizzati.
+  \item Terminato il gioco, la schermata finale elogia i trofei guadagnati e consiglia di ritornare in futuro per scoprire le quest ancora chiuse.
 \end{enumerate}
 
 \vspace{0.15cm}
@@ -109,7 +109,7 @@ Matteo supera la barriera dell'apatia iniziale grazie alla struttura a tappe e a
 \begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
   \toprule
   Persona     & Giovanni, 55 anni --- Impiegato del polo culturale \\
-  Task        & T1 + T2: Navigazione assistita e verifica dell'accuratezza dei contenuti \\
+  Task        & 1.2 Filtraggio accessibile profilato, 2.1 Scansione visiva ad overlay (AR) \\
   Contesto    & Durante il turno pomeridiano, un visitatore anziano si avvicina a Giovanni chiedendo dove si trovi una specifica opera e come raggiungerla evitando le scale, poiché si muove con difficoltà. \\
   \bottomrule
 \end{tabularx}
@@ -118,11 +118,11 @@ Matteo supera la barriera dell'apatia iniziale grazie alla struttura a tappe e a
 \vspace{0.3cm}
 \noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
 \begin{enumerate}[nosep, leftmargin=1.4em]
-  \item Giovanni apre l'app e digita il nome dell'opera nella ricerca rapida: il sistema localizza l'opera sulla planimetria del complesso in pochi secondi.
-  \item Applica il filtro ``senza barriere architettoniche'': l'app calcola il percorso privo di scale e indica gli ascensori e le rampe disponibili.
-  \item Mostra la mappa animata al visitatore sullo schermo del proprio smartphone, orientandosi rispetto all'ingresso corrente per indicare la direzione corretta in modo immediato e visivo.
-  \item Prima di congedare il visitatore, Giovanni consulta brevemente la scheda dell'opera per verificare che le informazioni visualizzate corrispondano all'allestimento attuale della sala, controllandone la coerenza con la realtà espositiva.
-  \item Soddisfatto dell'accuratezza, suggerisce al visitatore di attivare lui stesso l'app per seguire le indicazioni AR lungo il tragitto in autonomia.
+  \item Giovanni viene avvicinato da un visitatore anziano che fatica a camminare e chiede la direzione migliore per una specifica opera. Individua il quadro tramite la barra di ricerca rapida.
+  \item \textbf{[Sotto-task 1.2]} Per evitare le numerose scale del museo, Giovanni applica il filtraggio accessibile profilato (``senza barriere architettoniche''): l'app calcola il percorso vincolandolo alle rampe.
+  \item Orienta la planimetria 3D dello smartphone mostrandola direttamente al visitatore in modo da chiarirgli la direzione d'imbocco.
+  \item \textbf{[Sotto-task 2.1]} Successivamente, nel proprio giro di ronda nella medesima sala, Giovanni esegue una scansione visiva ad overlay (AR) allo scopo di testare empiricamente la validità spaziale e visiva dei tag informativi rispetto all'allestimento fisico.
+  \item Riscontrando la perfetta sincronizzazione del mapping, consiglia poi a nuovi passanti di sfruttare in autonomia la guida virtuale.
 \end{enumerate}
 
 \vspace{0.15cm}
@@ -141,7 +141,7 @@ Giovanni fornisce assistenza precisa in meno di un minuto, senza interrompere il
 \begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
   \toprule
   Persona     & Giovanni, 55 anni --- Impiegato del polo culturale \\
-  Task        & T4: Gestione e authoring dei contenuti culturali \\
+  Task        & 4.1 Creazione/modifica scheda opera, 4.2 Configurazione percorso AR guidato, 4.3 Pubblicazione e versionamento \\
   Contesto    & Una porzione della galleria est è stata chiusa per restauro e alcune opere sono state temporaneamente spostate. Giovanni riceve l'incarico di aggiornare l'app in vista dell'apertura del polo del giorno successivo, riflettendo la nuova disposizione espositiva. \\
   \bottomrule
 \end{tabularx}
@@ -150,11 +150,11 @@ Giovanni fornisce assistenza precisa in meno di un minuto, senza interrompere il
 \vspace{0.3cm}
 \noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
 \begin{enumerate}[nosep, leftmargin=1.4em]
-  \item Giovanni accede al pannello di amministrazione dell'applicazione utilizzando le proprie credenziali.
-  \item Individua le schede delle opere trasferite dalla galleria est e ne modifica il campo "Posizione", associandole alla nuova sala espositiva.
-  \item Aggiorna un percorso guidato (AR) preesistente, ricalcolando le tappe in base alla nuova disposizione per garantire che i turisti non incappino nelle aree chiuse per restauro.
-  \item Sfrutta la funzione di anteprima della dashboard per verificare il corretto instradamento visivo garantito dalle frecce AR per il percorso appena ricalcolato.
-  \item Certo del risultato, preme il pulsante di pubblicazione: le modifiche vengono immediatamente salvate, con la consapevolezza che, in caso di errore, il sistema garantisce il ripristino istantaneo della configurazione precedente (rollback).
+  \item Ricevuta comunicazione della chiusura temporanea della galleria est, Giovanni accede alle sezioni amministrative dell'applicazione.
+  \item \textbf{[Sotto-task 4.1]} Modifica le schede opera dei manufatti spostati per l'occasione, digitando le variazioni sui campi testuali e aggiornandone i perimetri di posizionamento nella nuova sala.
+  \item \textbf{[Sotto-task 4.2]} Esegue un ricalcolo e una configurazione del percorso AR guidato modificando le tappe colpite, assicurandosi che il tracciato porti i turisti lontani dalle zone chiuse per cantiere.
+  \item Controlla brevemente nella visualizzazione d'anteprima che l'instradamento avvenga correttamente sui nuovi nodi.
+  \item \textbf{[Sotto-task 4.3]} Rilascia l'aggiornamento sfruttando il sistema di pubblicazione e versionamento, protetto dalla sicurezza di poter attuare un eventuale rollback se dovessero emergere problematiche alla riapertura.
 \end{enumerate}
 
 \vspace{0.15cm}
