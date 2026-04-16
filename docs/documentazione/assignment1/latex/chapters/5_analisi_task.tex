@@ -2,14 +2,14 @@
 
 Spostando il focus dalle singole funzionalità dell'interfaccia (come l'apertura della mappa) ai reali obiettivi di fruizione, il peso di ogni operazione varia sensibilmente in base alle necessità di ciascun profilo. La tabella seguente classifica i macro-task distinguendo tra:
 \begin{itemize}[nosep, leftmargin=1.2em]
-    \item[\textcolor{culturiaRed}{\textbullet}] \textbf{Necessario (N)} --- indispensabile per il raggiungimento del goal primario;
-    \item[\textcolor{culturiaRed}{\textbullet}] \textbf{Facoltativo (F)} --- arricchisce l'esperienza senza esserne vincolante.
+    \item[\textcolor{culturiaRed}{\textbullet}] \textbf{Necessario (N)} — indispensabile per il raggiungimento del goal primario;
+    \item[\textcolor{culturiaRed}{\textbullet}] \textbf{Facoltativo (F)} — arricchisce l'esperienza senza esserne vincolante.
 \end{itemize}
 
-% ─── Tabella Task ──────────────────────────────────────────────
-\renewcommand{\arraystretch}{1.35}
+% ─── Tabella Task (Parte 1) ──────────────────────────────────────
+\renewcommand{\arraystretch}{1.25}
 
-\begin{table}[ht!]
+\begin{table}[H]
 \centering
 \small
 \resizebox{\textwidth}{!}{%
@@ -31,7 +31,7 @@ Spostando il focus dalle singole funzionalità dell'interfaccia (come l'apertura
 
 % ── TASK 1 ─────────────────────────────────────────────────────
 \rowcolor{culturiaBeige}
-\textbf{1.\ Pianificazione e gestione del percorso} \newline {\footnotesize(Ottimizzazione del tempo)}
+\textbf{1.\ Pianificazione e gestione del percorso} 
   & Marco {\footnotesize(T.\ Esterno)}     & \textbf{N} & Alta  & Alta  & Fondamentale per individuare rapidamente le opere principali nel limitato tempo a disposizione.  \\
 \rowcolor{culturiaBeige}
   & Elena {\footnotesize(T.\ Int.\ Assiduo)} & \textbf{F} & Bassa & Bassa & Conosce già approfonditamente la planimetria e la disposizione delle sale.            \\
@@ -43,12 +43,39 @@ Spostando il focus dalle singole funzionalità dell'interfaccia (come l'apertura
 \midrule
 
 % ── TASK 2 ─────────────────────────────────────────────────────
-\textbf{2.\ Comprensione a fondo e adattamento del livello di dettaglio}
+\textbf{2.\ Comprensione del patrimonio e approfondimento informativo}
   & Marco {\footnotesize(T.\ Esterno)}     & \textbf{F} & Bassa & Bassa & Predilige informazioni rapide e coincise, evitando testi troppo densi.         \\
   & Elena {\footnotesize(T.\ Int.\ Assiduo)} & \textbf{N} & Alta  & Alta  & Rappresenta il nucleo della visita: cerca retroscena, dettagli nascosti e restauri. \\
   & Matteo {\footnotesize(T.\ Int.\ Nuovo)}  & \textbf{N} & Media & Alta  & Cruciale per abbattere i tecnicismi attraverso la mediazione dell'IA. \\
   & Giovanni {\footnotesize(Impiegato)}      & \textbf{N} & Media & Alta  & Verifica l'accuratezza e l'autenticità dei contenuti digitali esposti. \\
 
+\bottomrule
+\end{tabular}%
+}
+\vspace{0.15cm}
+\caption{Analisi dei macro-task orientati agli obiettivi (Parte 1): \textbf{N}\,=\,Necessario, \textbf{F}\,=\,Facoltativo.}
+\label{tab:task_analysis_1}
+\end{table}
+
+% ─── Tabella Task (Parte 2) ──────────────────────────────────────
+\begin{table}[H]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{
+    >{\raggedright\arraybackslash}p{4.2cm}
+    >{\raggedright\arraybackslash}p{2.8cm}
+    c c c
+    >{\raggedright\arraybackslash}p{6.0cm}
+}
+\toprule
+\rowcolor{culturiaRed}
+\textcolor{culturiaWhite}{\textbf{Macro-task}} &
+\textcolor{culturiaWhite}{\textbf{Persona}} &
+\textcolor{culturiaWhite}{\textbf{Tipo}} &
+\textcolor{culturiaWhite}{\textbf{Freq.}} &
+\textcolor{culturiaWhite}{\textbf{Import.}} &
+\textcolor{culturiaWhite}{\textbf{Motivazione}} \\
 \midrule
 
 % ── TASK 3 ─────────────────────────────────────────────────────
@@ -65,7 +92,7 @@ Spostando il focus dalle singole funzionalità dell'interfaccia (come l'apertura
 \midrule
 
 % ── TASK 4 ─────────────────────────────────────────────────────
-\textbf{4.\ Gestione e authoring dei contenuti culturali} \newline {\footnotesize(Pubblicazione autonoma dei contenuti)}
+\textbf{4.\ Gestione e authoring dei contenuti culturali} 
   & Marco {\footnotesize(T.\ Esterno)}     & \textbf{F} & --    & --    & Non è di sua competenza; fruisce i contenuti senza crearli.               \\
   & Elena {\footnotesize(T.\ Int.\ Assiduo)} & \textbf{F} & --    & --    & Utente consumer: esplora i contenuti ma non ne è l'autore.                \\
   & Matteo {\footnotesize(T.\ Int.\ Nuovo)}  & \textbf{F} & --    & --    & Non pertinente al suo ruolo di visitatore occasionale.                    \\
@@ -75,8 +102,8 @@ Spostando il focus dalle singole funzionalità dell'interfaccia (come l'apertura
 \end{tabular}%
 }
 \vspace{0.15cm}
-\caption{Analisi dei macro-task orientati agli obiettivi: \textbf{N}\,=\,Necessario, \textbf{F}\,=\,Facoltativo.}
-\label{tab:task_analysis}
+\caption{Analisi dei macro-task orientati agli obiettivi (Parte 2).}
+\label{tab:task_analysis_2}
 \end{table}
 
 \vspace{0.8cm}
@@ -118,7 +145,7 @@ Al fine di calare l'analisi a un livello più concreto ed empirico, come richies
 \midrule
 
 \rowcolor{culturiaBeige}
-\textbf{1.2 Filtraggio accessibile profilato} 
+\textbf{1.2 Individuazione di percorsi e servizi accessibili} 
   & Marco & \textbf{N} & Alta & Alta & Fondamentale per ottimizzare il percorso nel poco tempo concesso. \\\hline
 \rowcolor{culturiaBeige}
   & Elena & \textbf{F} & Bassa & Bassa & Conosce già i percorsi principali privi di barriere. \\\hline
@@ -201,7 +228,7 @@ Al fine di calare l'analisi a un livello più concreto ed empirico, come richies
 \bottomrule
 \end{tabular}%
 }
-\caption{Analisi dei Sotto-task: Comprensione a fondo e adattamento del dettaglio.}
+\caption{Analisi dei Sotto-task: Comprensione del patrimonio e approfondimento informativo.}
 \label{tab:subtasks_2}
 \end{table}
 
@@ -297,11 +324,7 @@ Al fine di calare l'analisi a un livello più concreto ed empirico, come richies
 \textbf{4.2 Configurazione percorso AR guidato}
   & Giovanni & \textbf{N} & Media & Alta  & Definizione dell'ordine delle tappe, aree trigger RFID e contenuto AR associato a ciascuna. \\\hline
 
-\textbf{4.3 Pubblicazione e versionamento}
-  & Giovanni & \textbf{N} & Media & Alta  & Pubblicare aggiornamenti in produzione con possibilità di rollback in caso di errori. \\\hline
-
-\rowcolor{culturiaBeige}
-\textbf{4.4 Monitoraggio statistiche di visita}
+\textbf{4.3 Monitoraggio statistiche di visita}
   & Giovanni & \textbf{F} & Bassa & Media & Consultare analytics per ottimizzare l'offerta in base alla fruizione reale dei percorsi. \\
 
 \bottomrule
