@@ -26,6 +26,7 @@
 \usetikzlibrary{shapes.geometric}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+\usepackage{pdflscape}
 
 % ─── Palette Colori ─────────────────────────────────────────
 \definecolor{culturiaRed}{HTML}{78241c}
@@ -38,6 +39,7 @@
 
 \titleformat{\section}{\color{culturiaRed}\normalfont\Large\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}{\color{culturiaRed}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\color{culturiaRed}\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
 \hypersetup{
     colorlinks=true,
@@ -57,6 +59,7 @@
 \renewcommand{\headrule}{\hbox to\headwidth{\color{culturiaRed}\leaders\hrule height \headrulewidth\hfill}}
 
 % ─── Document ──────────────────────────────────────────────
+\pdfsuppresswarningpagegroup=1
 \begin{document}
 
 \begin{titlepage}
@@ -78,7 +81,7 @@
     
     {\huge\bfseries Culturia\par}
     \vspace{0.5cm}
-    {\Large\itshape Assignment 2 --- Technology \& Market Analysis\par}
+    {\Large\itshape Assignment 2 --- Analisi dei competitor ed idee di progetto\par}
     
     \vfill
     
@@ -117,6 +120,7 @@
 \input{chapters/5_contributi}
 
 \clearpage
+\nocite{vitiello_course}
 \bibliographystyle{unsrt}
 \bibliography{bibliography}
 
