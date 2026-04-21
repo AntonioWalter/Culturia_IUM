@@ -3,7 +3,8 @@
 I seguenti casi d'uso descrivono in modo concreto e passo-passo le interazioni che gli utenti di Culturia intraprenderanno con il sistema. Ogni scenario è ancorato ai sotto-task definiti nell'Assignment~1, garantendo coerenza con l'analisi dei bisogni emersi dalla ricerca sugli utenti.
 
 % ─── UC1 ─────────────────────────────────────────────────────────
-\subsection*{UC1 — Scansione RFID e accesso ai contenuti del luogo}
+\newpage
+\subsection{UC1 — Scansione RFID e accesso ai contenuti del luogo}
 
 \noindent
 \begingroup
@@ -40,7 +41,8 @@ Marco ottiene in pochi secondi una panoramica completa del luogo e di tutte le f
 \vspace{0.5cm}
 
 % ─── UC2 ─────────────────────────────────────────────────────────
-\subsection*{UC2 — Scansione visiva ed overlay in Realtà Aumentata}
+\newpage
+\subsection{UC2 — Scansione visiva ed overlay in Realtà Aumentata}
 
 \noindent
 \begingroup
@@ -49,7 +51,7 @@ Marco ottiene in pochi secondi una panoramica completa del luogo e di tutte le f
 \begin{tabularx}{\textwidth}{@{} >{\bfseries\color{culturiaRed}}m{2.2cm} X @{}}
   \toprule
   Persona     & Elena, 26 anni --- Turista Interna (Visitatrice Assidua) \\
-  Sotto-task  & 2.1 Scansione visiva ad overlay (AR), 2.2 Selezione Tone of Voice (IA), 2.3 Interrogazione vocale dinamica \\
+  Sotto-task  & 2.1 Scansione visiva ad overlay (AR), 3.3 Liste di missioni contestuali \\
   Contesto    & Elena ha appena completato la scansione RFID (UC1) ed è all'interno del polo culturale. Decide di avviare il tour in Realtà Aumentata per approfondire uno degli affreschi presenti nella sala nord. \\
   \bottomrule
 \end{tabularx}
@@ -63,23 +65,21 @@ Marco ottiene in pochi secondi una panoramica completa del luogo e di tutte le f
   \item Elena punta la fotocamera verso l'affresco medievale: il sistema lo riconosce automaticamente e sovrappone un overlay con le informazioni contestuali più rilevanti:
     \begin{itemize}[nosep, leftmargin=1.6em]
       \item nome e datazione dell'opera;
-      \item annotazioni evidenziate sulle aree di restauro;
       \item icone interattive per approfondire specifici dettagli.
     \end{itemize}
   \item Nell'interfaccia AR è visibile anche la \textbf{mappa del percorso consigliato}: frecce direzionali indicano le tappe successive del tour, aiutando Elena a navigare nella sala senza perdere il filo del percorso.
-  \item Elena seleziona il Tone of Voice ``Accademico'' per ricevere descrizioni con terminologia specialistica, adatta al suo percorso universitario.
-  \item Incuriosita da una figura secondaria nell'angolo inferiore, formula una domanda vocale al Cicerone IA per ottenere informazioni più verticali sul soggetto rappresentato.
-  \item Il sistema risponde con una spiegazione dettagliata e suggerisce un'opera correlata in un'altra sala, invitando Elena a proseguire il percorso.
+  \item Elena, cliccando sull'apposita sezione, valuta tra le missioni disponibili per completare le task del luogo culturale e farsi guidare in specifiche quest.
 \end{enumerate}
 
 \vspace{0.15cm}
 \noindent\textbf{\color{culturiaRed}Risultato atteso:}
-Elena fruisce di uno strato informativo ricco e interattivo direttamente sull'opera, senza mai interrompere il flusso della visita. La combinazione di overlay AR, navigazione integrata e dialogo con il Cicerone trasforma la sua esperienza in uno studio attivo dell'opera.
+Elena fruisce di uno strato informativo ricco e interattivo direttamente sull'opera, integrando la scoperta dei contenuti con le sfide proposte dal sistema di gamification. La visita diventa così un'esplorazione guidata e motivante che unisce approfondimento culturale e partecipazione attiva.
 
 \vspace{0.5cm}
 
 % ─── UC3 ─────────────────────────────────────────────────────────
-\subsection*{UC3 — Liste di missioni contestuali}
+\newpage
+\subsection{UC3 — Liste di missioni contestuali}
 
 \noindent
 \begingroup
@@ -105,8 +105,9 @@ Elena fruisce di uno strato informativo ricco e interattivo direttamente sull'op
       \item \textbf{Azioni in-app} — obiettivi relativi all'uso delle funzionalità (es.\ ascoltare 3 spiegazioni AI, usare il filtro accessibilità, ecc.).
     \end{itemize}
   \item Matteo seleziona la missione \textit{``Il Drago Nascosto''} e consulta le tappe richieste e il premio digitale previsto al completamento.
-  \item Guidato dall'app, raggiunge il primo tag RFID della missione: avvicina lo smartphone e sblocca il primo step, ricevendo un feedback visivo animato e un badge parziale nella dashboard.
-  \item Completa le tappe successive, vedendo la propria barra di progressione avanzare in tempo reale.
+  \item Attivando la modalità \textbf{AR Quest}, Matteo viene guidato fisicamente tra le sale: frecce direzionali e indicatori 3D in overlay sulla fotocamera lo conducono verso la prima opera della missione.
+  \item Una volta raggiunta l'opera, la scansiona tramite la fotocamera AR (o avvicina lo smartphone al relativo tag RFID): riceve un feedback visivo animato e un badge parziale nella dashboard.
+  \item Completa le tappe successive seguendo le indicazioni della guida AR, vedendo la propria barra di progressione avanzare in tempo reale mentre scopre i dettagli richiesti dalla missione.
   \item Al termine, la missione viene segnata come completata: vengono assegnati il badge definitivo, i punti e viene visualizzata la lista delle missioni ancora aperte per incentivare il ritorno.
 \end{enumerate}
 
@@ -117,7 +118,8 @@ Matteo supera la soglia dell'apatia iniziale grazie alla struttura narrativa e a
 \vspace{0.5cm}
 
 % ─── UC4 ─────────────────────────────────────────────────────────
-\subsection*{UC4 — Configurazione di un percorso AR guidato}
+\newpage
+\subsection{UC4 — Configurazione di un percorso AR guidato}
 
 \noindent
 \begingroup
@@ -127,7 +129,7 @@ Matteo supera la soglia dell'apatia iniziale grazie alla struttura narrativa e a
   \toprule
   Persona     & Giovanni, 55 anni --- Impiegato del polo culturale \\
   Sotto-task  & 4.2 Configurazione percorso AR guidato \\
-  Contesto    & Giovanni deve configurare un nuovo tour guidato in AR per una mostra temporanea appena allestita. Le schede delle opere sono già presenti nella piattaforma. Accede all'interfaccia di authoring di Culturia, progettata per essere usata in autonomia da figure non tecniche, in modo simile a strumenti come NotebookLM. \\
+  Contesto    & Giovanni deve configurare un nuovo tour guidato in AR per una mostra temporanea appena allestita. Accede alla piattaforma Culturia per gestire i contenuti del polo di sua competenza, utilizzando strumenti semplificati che gli permettono di operare in totale autonomia. \\
   \bottomrule
 \end{tabularx}
 \endgroup
@@ -135,15 +137,18 @@ Matteo supera la soglia dell'apatia iniziale grazie alla struttura narrativa e a
 \vspace{0.3cm}
 \noindent\textbf{\color{culturiaRed}Sequenza di azioni:}
 \begin{enumerate}[nosep, leftmargin=1.4em]
-  \item Giovanni accede al pannello di amministrazione e apre la sezione \textbf{Percorsi AR}, quindi seleziona \textbf{Crea nuovo percorso}.
-  \item Nella prima schermata, carica le fonti di riferimento per il tour: documenti PDF, cataloghi della mostra e immagini delle opere, che alimentano la base di conoscenza del Cicerone IA.
-  \item Inserisce un \textbf{prompt testuale} per istruire l'IA su come narrare il percorso (es.\ \textit{``Tono avventuroso per un pubblico giovane, con focus sul simbolismo dei colori''}).
-  \item Accede alla \textbf{mappa interattiva} del polo culturale e, tramite drag-and-drop, seleziona e ordina i punti di interesse che comporranno le tappe del tour.
-  \item Per ciascuna tappa, associa il tag RFID fisico corrispondente all'opera o all'area espositiva tramite un menù a tendina.
-  \item Avvia la \textbf{modalità anteprima}: visualizza il percorso simulato con le frecce AR e i testi generati dall'IA, verificando la coerenza narrativa e spaziale del tour.
-  \item Apporta eventuali aggiustamenti (riordina le tappe, modifica il prompt) e preme \textbf{Pubblica}: il tour diventa immediatamente disponibile per i visitatori nell'app.
+  \item Giovanni accede alla sua dashboard principale e seleziona uno dei luoghi culturali di cui è amministratore.
+  \item All'interno della dashboard specifica del luogo, clicca sul pulsante \textbf{Crea nuovo tour}.
+  \item Nella schermata di creazione, Giovanni procede con l'inserimento delle tappe che comporranno il percorso, ripetendo ciclicamente per ognuna le seguenti azioni:
+    \begin{itemize}[nosep, leftmargin=1.6em]
+      \item caricamento delle \textbf{fonti di riferimento} (testi o documenti) per alimentare la base di conoscenza della tappa;
+      \item inserimento delle \textbf{immagini per il riconoscimento} visivo che l'app userà per attivare l'overlay AR;
+      \item impostazione della \textbf{posizione geografica} o spaziale della tappa sulla mappa.
+    \end{itemize}
+  \item Una volta terminata la configurazione di tutte le tappe, Giovanni clicca su \textbf{Salva}.
+  \item Il sistema genera istantaneamente un \textbf{QR Code di test}: inquadrandolo, Giovanni può provare il tour completo sul proprio smartphone in \textbf{modalità temporanea}, verificando sul campo la precisione dell'AR e dei contenuti prima di pubblicarli ufficialmente.
 \end{enumerate}
 
 \vspace{0.15cm}
 \noindent\textbf{\color{culturiaRed}Risultato atteso:}
-Giovanni configura e pubblica un tour AR completo in totale autonomia, senza dover coinvolgere tecnici esterni. L'interfaccia visuale con mappa, prompt testuale e anteprima integrata abbatte la barriera tecnica, consentendo a figure non specializzate di produrre percorsi culturali di qualità professionale.
+Giovanni valida il percorso appena creato attraverso una prova diretta (test field) facilitata dal QR Code. Questo flusso garantisce la massima qualità del contenuto erogato e permette di correggere eventuali incongruenze tra il posizionamento virtuale e l'ambiente fisico prima della fruizione da parte del pubblico.
