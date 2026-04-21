@@ -26,6 +26,7 @@
 \usetikzlibrary{shapes.geometric}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+\usepackage{pdflscape}
 
 % ─── Palette Colori ─────────────────────────────────────────
 \definecolor{culturiaRed}{HTML}{78241c}
@@ -58,6 +59,7 @@
 \renewcommand{\headrule}{\hbox to\headwidth{\color{culturiaRed}\leaders\hrule height \headrulewidth\hfill}}
 
 % ─── Document ──────────────────────────────────────────────
+\pdfsuppresswarningpagegroup=1
 \begin{document}
 
 \begin{titlepage}
@@ -118,6 +120,7 @@
 \input{chapters/5_contributi}
 
 \clearpage
+\nocite{vitiello_course}
 \bibliographystyle{unsrt}
 \bibliography{bibliography}
 
