@@ -24,13 +24,24 @@ La conformazione del progetto è suddivisa essenzialmente nelle seguenti macro-a
 
 ```text
 Culturia_IUM/
-├── docs/                     ← Comparto documentale accademico e analitico del corso.
-│   └── documentazione/
-│       └── assignment1/      ← Documenti LaTeX (Stakeholder, Personas, Report UX ed Empowerment).
+├── docs/
+│   ├── documentazione/
+│   │   ├── assignment1/
+│   │   │   ├── assignment1.pdf
+│   │   │   └── latex/
+│   │   └── assignment2/
+│   │       ├── assignment2.pdf
+│   │       └── latex/
+│   ├── allegati/
+│   │   └── sketches/
+│   └── presentazione/
 │
-└── webapp/                   ← Codice sorgente della piattaforma e prototipazione interattiva
-                              implementata secondo gli strati e i canoni UX studiati.
+└── webapp/
 ```
+
+### 📄 Dettaglio Documentazione
+- **Assignment 1:** Focus sulla ricerca utenti, definizione delle *Personas*, analisi dei *macro-task* e obiettivi di *Empowerment*.
+- **Assignment 2:** Analisi dei competitor, definizione dei *Casi d'Uso* e stesura delle *Idee iniziali di progetto* (Sketch di navigazione).
 
 ---
 
