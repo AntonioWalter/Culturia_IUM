@@ -20,6 +20,13 @@
 \usepackage{parskip}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pdflscape}
 
 % ─── Palette Colori ─────────────────────────────────────────
 \definecolor{culturiaRed}{HTML}{78241c}
@@ -32,6 +39,7 @@
 
 \titleformat{\section}{\color{culturiaRed}\normalfont\Large\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}{\color{culturiaRed}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\color{culturiaRed}\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
 \hypersetup{
     colorlinks=true,
@@ -51,6 +59,7 @@
 \renewcommand{\headrule}{\hbox to\headwidth{\color{culturiaRed}\leaders\hrule height \headrulewidth\hfill}}
 
 % ─── Document ──────────────────────────────────────────────
+\pdfsuppresswarningpagegroup=1
 \begin{document}
 
 \begin{titlepage}
@@ -72,7 +81,7 @@
     
     {\huge\bfseries Culturia\par}
     \vspace{0.5cm}
-    {\Large\itshape Assignment 1 --- User \& Task Analysis\par}
+    {\Large\itshape Assignment 2 --- Analisi dei competitor ed idee di progetto\par}
     
     \vfill
     
@@ -98,21 +107,17 @@
 \tableofcontents
 \newpage
 
-% ─── Sezioni (da compilare) ────────────────────────────────
+% ─── Sezioni ───────────────────────────────────────────────
 
-\input{chapters/1_gestione_gruppo}
+\input{chapters/1_modifiche}
 \clearpage
-\input{chapters/2_descrizione_problema}
+\input{chapters/2_use_cases}
 \clearpage
-\input{chapters/3_sviluppo_personaggi}
+\input{chapters/3_analisi_comparativa}
 \clearpage
-\input{chapters/4_personas}
+\input{chapters/4_idee_progetto}
 \clearpage
-\input{chapters/5_analisi_task}
-\clearpage
-\input{chapters/6_obiettivi_empowerment}
-\clearpage
-\input{chapters/7_contributi}
+\input{chapters/5_contributi}
 
 \clearpage
 \nocite{vitiello_course}
