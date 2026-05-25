@@ -1,0 +1,48 @@
+\section{Valutazione con la Tecnica del Mago di Oz}
+
+Al fine di testare in modo rapido ed efficace l'usabilità, la piacevolezza d'uso e il flusso concettuale dell'applicazione prima di procedere allo sviluppo dell'alta fedeltà, abbiamo condotto una sessione di test utilizzando la tecnica del \textbf{Mago di Oz (\textit{Wizard of Oz})}.
+
+\subsection{Setup del Test in Loco}
+La valutazione si è svolta in un contesto d'uso reale ed immersivo: il \textbf{Castello Medievale di Vairano Patenora}. Questo ci ha permesso di osservare il comportamento dell'utente a contatto con un ambiente storico autentico, dove l'attenzione visiva deve essere equamente divisa tra il display del telefono e l'architettura circostante.
+
+Durante il test:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{L'Utente Campione}: Ciro, un turista interno di 21 anni, in linea con i profili giovani e orientati alla scoperta tecnologica individuati nelle nostre \textit{Personas}.
+    \item \textbf{Il Mago (Il Team)}: Poiché gli algoritmi di computer vision per il tracciamento degli spazi reali e il sistema conversazionale IA non sono ancora implementati nel prototipo interattivo, noi progettisti abbiamo svolto il ruolo di "Mago". Mentre Ciro camminava nel castello ed inquadrava con il telefono i vari punti d'interesse (es. torri, cinte murarie, portali), noi inserivamo e sbloccavamo manualmente sul prototipo Figma le informazioni corrispondenti a ciò che inquadrava in tempo reale.
+\end{itemize}
+
+\subsection{Opinioni Raccolte e Risultati UX}
+Ciro ha fornito feedback determinanti per lo sviluppo futuro, concentrandosi in particolare sulle due anime del sistema: la Realtà Aumentata e il Cicerone IA.
+
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Consultazione in Realtà Aumentata (Approccio Ibrido)}:\\
+    Per quanto riguarda le didascalie e le ricostruzioni visive 3D in AR, Ciro ha espresso una netta preferenza per un \textbf{approccio ibrido}. Ha notato che una didascalia AR troppo carica di testo a schermo intero stanca il braccio e ostruisce la bellezza visiva dell'opera reale. Preferisce quindi vedere delle etichette (infografiche) 3D leggere e spaziali sui punti focali, con la possibilità di espandere una tendina (Bottom Sheet) per approfondire le nozioni storiche solo sulle parti dell'opera a cui è realmente interessato.
+    
+    \item \textbf{Cicerone IA (Proattività e Suggerimenti)}:\\
+    Per l'assistente conversazionale basato su IA, Ciro ha fatto notare che un campo di chat completamente vuoto genera l'effetto "foglio bianco" (l'utente non sa cosa chiedere o da dove iniziare). Ha espresso la preferenza per dei \textbf{suggerimenti proattivi} (bottoni rapidi con domande suggerite o prompt pre-configurati) in grado di stuzzicare la sua curiosità e favorire la scoperta di aneddoti storici inaspettati.
+\end{enumerate}
+
+\subsection{Dichiarazione dell'Intervistato}
+Riportiamo di seguito una citazione diretta di Ciro estratta durante la sessione di test:
+
+\begin{quote}
+    \textit{"La ricostruzione 3D in Realtà Aumentata è bellissima, ma mi stancherei a leggere paragrafi lunghi di testo fluttuanti nello spazio. Preferisco di gran lunga avere dei punti caldi da toccare per far salire una tendina con i dettagli scritti bene, così decido io cosa approfondire. Inoltre, quando parlo con l'IA del castello, vorrei che mi proponesse lei delle curiosità o delle opzioni rapide su cui cliccare, altrimenti non mi viene in mente cosa chiedere di specifico."}
+\end{quote}
+
+\subsection{Fasi Iterative Effettuate}
+I feedback di Ciro hanno guidato il nostro processo di design iterativo su Figma, permettendoci di superare i limiti concettuali dei primi sketch e strutturare le soluzioni grafiche definitive del prototipo cliccabile:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Fase AR 1 (Solo Elementi 3D fluttuanti)}:\\
+    La primissima versione dell'interfaccia AR prevedeva le didascalie storiche interamente proiettate nello spazio tridimensionale, ancorate sopra l'affresco. Questa soluzione è stata scartata a seguito delle prove fisiche, in quanto la lettura di testi lunghi fluttuanti provocava un affaticamento visivo e ostruiva la visualizzazione del monumento reale.
+    
+    \item \textbf{Fase AR 2 (Solo Tendina 2D)}:\\
+    In un secondo tentativo, avevamo spostato tutti i contenuti testuali all'interno di classici pannelli a scorrimento (Bottom Sheet) bidimensionali. Questa iterazione risolveva i problemi di leggibilità, ma impoveriva il senso di immersione e l'interazione spaziale tipica dell'AR.
+    
+    \item \textbf{Fase AR 3 (Approccio Ibrido - Soluzione Finale)}:\\
+    Siamo giunti alla soluzione definitiva integrando entrambi i mondi: l'utente visualizza sul monumento fisico leggeri tag 3D interattivi (hotspot) che non disturbano la vista. Toccando un hotspot specifico, si espande una tendina 2D dal basso per leggere le spiegazioni approfondite. Questa soluzione garantisce la stabilità della lettura e mantiene l'immersività dell'AR.
+    
+    \item \textbf{Integrazione Suggerimenti IA}:\\
+    Per ovviare all'ansia da chat vuota emersa nel test del Cicerone IA, abbiamo inserito delle ``Suggestion Chips'' (bottoni rapidi con domande preimpostate) sopra la casella di input della chat. In questo modo l'utente ha degli spunti pronti per avviare il dialogo in modo semplice.
+\end{itemize}
+
