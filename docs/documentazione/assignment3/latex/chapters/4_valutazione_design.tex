@@ -1,0 +1,215 @@
+\section{Valutazione del Design}
+
+\subsection{Valutazione Euristica e Cognitive Walkthrough}
+
+Per valutare l'usabilità del prototipo interattivo, abbiamo applicato la tecnica del \textbf{Cognitive Walkthrough}. Agendo in qualità di esperti del settore e simulando i processi cognitivi dell'utente, abbiamo analizzato passo dopo passo i flussi corrispondenti ai casi d'uso definiti nell'Assignment~2, ponendoci per ogni azione tre domande standard:
+
+\begin{enumerate}[nosep, leftmargin=1.6em]
+    \item L'utente \textbf{saprà cosa fare} per realizzare il task?
+    \item L'utente \textbf{noterà} che è disponibile sull'interfaccia la corretta azione da eseguire?
+    \item Gli utenti \textbf{sapranno dal feedback} che hanno fatto una scelta di azione corretta o errata?
+\end{enumerate}
+
+\subsection{Risultati della Valutazione e Confronto}
+
+Di seguito viene riportata l'analisi dettagliata del Cognitive Walkthrough per ciascun caso d'uso principale.
+
+% ═══════════════════════════════════════════════════════════════
+\subsubsection{UC1 --- Scansione RFID e accesso ai contenuti del luogo}
+\textit{Persona: Marco, 46 anni --- Turista Esterno}
+
+\vspace{0.3cm}
+
+\noindent\textbf{Azione A:} L'utente avvicina lo smartphone al tag RFID presente sul pannello informativo all'ingresso del polo culturale.\\
+\textbf{Risposta A:} L'applicazione Culturia si attiva automaticamente, rileva il luogo culturale e ne carica i contenuti contestuali (nome, descrizione breve, orari e mappa interna).
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, il pannello informativo all'ingresso riporta istruzioni chiare con il logo di Culturia e un'icona NFC/RFID universalmente riconoscibile. L'azione di ``avvicinare il telefono'' è ormai consolidata nell'esperienza quotidiana degli utenti (pagamenti contactless, badge aziendali).
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, il pannello è posizionato all'ingresso, in un punto di passaggio obbligato. La dimensione e il contrasto cromatico del logo lo rendono immediatamente visibile.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, l'app mostra una schermata di caricamento con il nome del luogo rilevato, confermando che la scansione è andata a buon fine. In caso di errore, viene mostrato un messaggio di mancato rilevamento.
+\end{description}
+
+\vspace{0.4cm}
+\noindent\textbf{Azione B:} L'utente visualizza il pannello di benvenuto e scorre le opzioni disponibili.\\
+\textbf{Risposta B:} Sulla schermata compare un pannello di benvenuto con i contenuti del luogo e un menu di azioni disponibili: Tour in Realtà Aumentata, Spiegazione AI, Descrizione testuale, Strumenti di accessibilità.
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, la schermata presenta un layout a card con le informazioni principali del luogo e un menu di azioni chiaramente etichettate. Lo scroll verticale è un pattern nativo su smartphone; un leggero taglio visivo del contenuto (``peek'') suggerisce la presenza di ulteriori elementi sotto la piega.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, le opzioni sono organizzate come pulsanti prominenti con icone descrittive e testo accompagnatorio. La gerarchia visiva guida lo sguardo dall'alto (informazioni) verso il basso (azioni).
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, ogni pulsante è etichettato in modo esplicito (``Tour in Realtà Aumentata'', ``Spiegazione AI'', ecc.), eliminando ogni ambiguità sulla funzione attivata.
+\end{description}
+
+\vspace{0.4cm}
+\noindent\textbf{Azione C:} L'utente seleziona una delle funzionalità disponibili per iniziare la visita.\\
+\textbf{Risposta C:} L'app naviga alla schermata dedicata alla funzionalità scelta con un'animazione di transizione (slide da destra).
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, le opzioni sono formulate come azioni dirette (verbo + oggetto), rendendo chiaro quale esperienza si attiverà con il tap.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, i pulsanti hanno uno stato visivo distinto (colore bordeaux pieno) con un'area di tocco ampia.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, il tap provoca una transizione animata verso la schermata dedicata, confermando il passaggio a un nuovo contesto. In caso di errore, l'utente può tornare indietro con il tasto ``Back'' nella barra superiore.
+\end{description}
+
+% ═══════════════════════════════════════════════════════════════
+\vspace{0.5cm}
+\subsubsection{UC2 --- Scansione visiva ed overlay in Realtà Aumentata}
+\textit{Persona: Elena, 26 anni --- Turista Interna (Visitatrice Assidua)}
+
+\vspace{0.3cm}
+
+\noindent\textbf{Azione A:} Partendo dal pannello di benvenuto (UC1), l'utente tocca il pulsante ``Tour in Realtà Aumentata''.\\
+\textbf{Risposta A:} L'app apre la fotocamera in modalità AR e mostra un messaggio di istruzione (``Inquadra le opere intorno a te'').
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, il pulsante è chiaramente etichettato e accompagnato da un'icona fotocamera/AR che ne rende inequivocabile la funzione.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, il pulsante è posizionato in evidenza nel menu delle azioni, con un colore di sfondo contrastante rispetto al resto della schermata.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, l'apertura della fotocamera con il messaggio di onboarding conferma l'attivazione della funzionalità AR.
+\end{description}
+
+\vspace{0.4cm}
+\noindent\textbf{Azione B:} L'utente punta la fotocamera verso un affresco medievale presente nella sala.\\
+\textbf{Risposta B:} Il sistema riconosce automaticamente l'opera e sovrappone un overlay con nome, datazione e icone interattive per approfondire specifici dettagli.
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, il messaggio di onboarding invita esplicitamente a puntare la fotocamera verso le opere circostanti. L'azione di ``inquadrare qualcosa'' con lo smartphone è un comportamento ormai naturale.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, il mirino e le animazioni di scansione guidano l'utente verso l'inquadratura corretta.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, quando il sistema riconosce l'opera, sovrappone immediatamente l'overlay informativo, fornendo una risposta visiva immediata e contestuale. Se l'opera non viene riconosciuta, il mirino continua a pulsare senza mostrare overlay.
+\end{description}
+
+\vspace{0.4cm}
+\noindent\textbf{Azione C:} L'utente tocca un'icona interattiva presente nell'overlay sovrapposto all'opera.\\
+\textbf{Risposta C:} Si espande un pannello contestuale con i dettagli richiesti (testo storico, audio del Cicerone IA) senza uscire dalla modalità fotocamera.
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, le icone interattive (es.\ lente d'ingrandimento, altoparlante) suggeriscono chiaramente azioni di approfondimento.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, l'overlay è ancorato all'opera reale e fluttua nello spazio AR, attirando naturalmente l'attenzione. Le icone hanno dimensioni adeguate al touch.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, l'espansione del pannello contestuale conferma l'azione e fornisce le informazioni richieste senza interrompere l'esperienza AR.
+\end{description}
+
+\vspace{0.4cm}
+\noindent\textbf{Azione D:} L'utente segue le frecce direzionali turn-by-turn per raggiungere la tappa successiva del tour.\\
+\textbf{Risposta D:} Avvicinandosi alla tappa successiva, la freccia si dissolve e un nuovo overlay appare sull'opera raggiunta.
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, le frecce direzionali AR guidano fisicamente l'utente verso la tappa successiva del tour, indicandola nello spazio reale in modo analogo alla navigazione GPS.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, le frecce sono animate e colorate in modo contrastante (bordeaux su sfondo reale), rendendo impossibile ignorarle.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, l'overlay sulla nuova opera raggiunta conferma il progresso nel percorso. La dissoluzione della freccia precedente segnala il completamento della tappa.
+\end{description}
+
+% ═══════════════════════════════════════════════════════════════
+\vspace{0.5cm}
+\subsubsection{UC3 --- Configurazione di un percorso AR guidato}
+\textit{Persona: Giovanni, 55 anni --- Impiegato del polo culturale}
+
+\vspace{0.3cm}
+
+\noindent\textbf{Azione A:} L'utente accede alla dashboard principale e seleziona uno dei luoghi culturali di cui è amministratore.\\
+\textbf{Risposta A:} Si apre la dashboard specifica del luogo selezionato, con le sezioni di gestione (Tour, Eventi, Statistiche) chiaramente organizzate.
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, la dashboard principale mostra i luoghi gestiti in una lista chiara, ciascuno con nome, immagine e stato (attivo/bozza).
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, i luoghi sono presentati come card con area di tocco ampia e un'icona ``ingranaggio'' che ne suggerisce la gestibilità.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, il tap apre la dashboard specifica del luogo con le sezioni di gestione chiaramente visibili, confermando la corretta selezione.
+\end{description}
+
+\vspace{0.4cm}
+\noindent\textbf{Azione B:} L'utente clicca sul pulsante ``Crea nuovo tour'' all'interno della sezione Tour.\\
+\textbf{Risposta B:} Si apre la schermata di creazione con un form guidato, con il cursore posizionato sul primo campo (``Nome del tour'').
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, il pulsante ``Crea nuovo tour'' è l'azione primaria della sezione, posizionato in alto con un'icona ``+'' universalmente riconoscibile.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, il pulsante ha uno stile \textit{filled} (colore bordeaux pieno) che lo distingue visivamente dagli altri elementi della pagina.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, l'apertura della schermata di creazione con il form guidato conferma che l'azione è stata eseguita correttamente.
+\end{description}
+
+\vspace{0.4cm}
+\noindent\textbf{Azione C:} L'utente inserisce le tappe del percorso, caricando per ognuna le fonti di riferimento, le immagini per il riconoscimento visivo e la posizione sulla mappa.\\
+\textbf{Risposta C:} Ogni campo caricato mostra un'anteprima (thumbnail del documento, miniatura dell'immagine, pin sulla mappa).
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, la schermata di creazione presenta un'area ``Tappe'' con un pulsante ``Aggiungi tappa'' e, per ogni tappa, tre campi ben etichettati: \textit{Fonti di riferimento}, \textit{Immagini per il riconoscimento}, \textit{Posizione sulla mappa}.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    \textbf{Parzialmente.} I tre sotto-campi di ogni tappa sono visibili, ma su dispositivi con schermo più piccolo la sezione ``Posizione sulla mappa'' potrebbe finire below the fold, richiedendo uno scroll. \textit{Criticità: potrebbe essere utile un indicatore di completamento per ogni tappa (es.\ spunta verde) per evitare dimenticanze.}
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, ogni campo caricato mostra un'anteprima visiva, confermando il corretto inserimento dei dati.
+\end{description}
+
+\vspace{0.4cm}
+\noindent\textbf{Azione D:} L'utente clicca su ``Salva'' dopo aver completato l'inserimento di tutte le tappe.\\
+\textbf{Risposta D:} Il sistema mostra una notifica di salvataggio riuscito e genera istantaneamente un QR Code di test, presentandolo in un modale dedicato.
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, il pulsante ``Salva'' è chiaramente visibile in fondo alla pagina, un posizionamento standard per le azioni di conferma.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, il pulsante è in stile \textit{filled} con testo ``Salva'' e icona di conferma.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, la notifica di salvataggio riuscito e la generazione del QR Code confermano che il tour è stato salvato correttamente.
+\end{description}
+
+\vspace{0.4cm}
+\noindent\textbf{Azione E:} L'utente inquadra il QR Code generato con il proprio smartphone per testare il tour in modalità temporanea.\\
+\textbf{Risposta E:} Lo smartphone apre Culturia in modalità test con un banner colorato ``ANTEPRIMA --- Tour non ancora pubblicato''.
+
+\begin{description}[leftmargin=1.5em, style=nextline, font=\bfseries\color{culturiaRed}]
+    \item[1. L'utente saprà cosa fare per realizzare il task?]
+    Sì, il modale con il QR Code include istruzioni esplicite: ``Inquadra questo codice con il tuo smartphone per provare il tour in modalità temporanea''.
+    
+    \item[2. L'utente noterà che è disponibile sull'interfaccia la corretta azione da eseguire?]
+    Sì, il QR Code è visualizzato con dimensioni generose al centro dello schermo, accompagnato da un pulsante secondario ``Condividi QR'' per inviarlo a colleghi.
+    
+    \item[3. Gli utenti sapranno dal feedback che hanno fatto una scelta di azione corretta o errata?]
+    Sì, il banner ``ANTEPRIMA'' conferma che si tratta di una prova e non della versione pubblica. Giovanni può così validare il percorso sul campo prima di renderlo disponibile ai visitatori.
+\end{description}
+
+% Fine del capitolo della Valutazione del Design
+

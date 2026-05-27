@@ -1,0 +1,29 @@
+\section{Design Pattern Adottati}
+
+Durante la progettazione delle interfacce per Culturia, sia sul fronte mobile che su quello web, abbiamo adottato una serie di \textbf{Design Pattern} consolidati nell'ambito dell'Interazione Uomo-Macchina. L'uso di questi pattern standardizzati garantisce una navigazione intuitiva, riduce il carico cognitivo degli utenti e risolve problemi di usabilità specifici associati ai diversi contesti d'uso.
+
+\subsection[Go Back to a Safe Place]{Go Back to a Safe Place --- Ritorno a un luogo sicuro}
+Il pattern \textit{"Go back to a safe place"} offre all'utente una via di fuga immediata ed evidente da situazioni complesse, flussi articolati o ambienti immersivi, riportandolo istantaneamente in una schermata familiare e priva di rischi.
+
+Nel nostro sistema, questo pattern è stato implementato nei seguenti contesti:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Interfaccia Mobile (AR):}\\
+    Durante l'esplorazione immersiva in Realtà Aumentata, l'utente potrebbe sentirsi disorientato o stancarsi a causa dell'inquadratura continua. In alto a sinistra di questa schermata è sempre presente una \textbf{freccia indietro} ben visibile. Premendo questo pulsante, l'utente può abbandonare istantaneamente la fotocamera AR e ritornare alla schermata principale di dettaglio del sito culturale (la sua "safe place").
+    
+    \item \textbf{Gestionale Web (Pannello Amministratore):}\\
+    Il portale web per gli addetti ai lavori prevede azioni complesse, come la configurazione spaziale in 3D dei punti d'interesse e la generazione guidata di tour. Per evitare che l'operatore si senta intrappolato in flussi a più passaggi, in alto a sinistra è sempre presente il \textbf{logo di Culturia}. Questo elemento funge da escape hatch universale, consentendo di annullare qualsiasi operazione complessa e tornare istantaneamente alla home page del gestionale.
+\end{itemize}
+
+\subsection[Wizard / Multi-step Process]{Wizard / Multi-step Process --- Procedura Guidata a Passaggi}
+Il pattern \textit{"Wizard"} (o procedura guidata) è stato introdotto originariamente da Microsoft all'inizio degli anni '90 per guidare gli utenti meno esperti in configurazioni complesse o ad alto rischio (come le installazioni hardware in Windows 95), nascondendo la complessità del backend e mostrando solo domande sequenziali. 
+
+Nell'ambito dell'usabilità, questo pattern si basa sulla scomposizione (\textit{chunking}) di un task lungo ed articolato in una sequenza ordinata di passaggi più semplici e lineari.
+
+Nel nostro sistema, questo pattern è stato implementato nei seguenti contesti:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Gestionale Web (Creazione del Tour AR):}\\
+    La configurazione di un percorso in Realtà Aumentata e il caricamento delle fonti storiche per l'addestramento dell'IA sono attività complesse destinate ad addetti ai lavori non specialisti (come la nostra Persona \textbf{Giovanni}). Per evitare sovraccarichi cognitivi ed errori a cascata, il flusso è stato suddiviso in passaggi guidati sequenziali (Dati di base $\rightarrow$ Caricamento fonti $\rightarrow$ Elaborazione $\rightarrow$ Posizionamento 3D sulla mappa). 
+    
+    Ogni passo viene validato singolarmente dal sistema prima di consentire il passaggio a quello successivo, fornendo un chiaro indicatore di progresso visivo (\textit{Stepper}) in cima alla pagina per rassicurare l'utente sullo stato dell'operazione.
+\end{itemize}
+
