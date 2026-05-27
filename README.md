@@ -29,11 +29,16 @@ Culturia_IUM/
 │   │   ├── assignment1/
 │   │   │   ├── assignment1.pdf
 │   │   │   └── latex/
-│   │   └── assignment2/
-│   │       ├── assignment2.pdf
+│   │   ├── assignment2/
+│   │   │   ├── assignment2.pdf
+│   │   │   └── latex/
+│   │   └── assignment3/
+│   │       ├── assignment3.pdf
 │   │       └── latex/
 │   ├── allegati/
-│   │   └── sketches/
+│   │   ├── sketches/
+│   │   ├── mockup_mobile/
+│   │   └── mockup_web/
 │   └── presentazione/
 │
 └── webapp/
@@ -42,6 +47,12 @@ Culturia_IUM/
 ### 📄 Dettaglio Documentazione
 - **Assignment 1:** Focus sulla ricerca utenti, definizione delle *Personas*, analisi dei *macro-task* e obiettivi di *Empowerment*.
 - **Assignment 2:** Analisi dei competitor, definizione dei *Casi d'Uso* e stesura delle *Idee iniziali di progetto* (Sketch di navigazione).
+- **Assignment 3:** Mockup, prototipo interattivo e valutazione del design — Design Pattern, test *Mago di Oz*, *Cognitive Walkthrough* e lista delle modifiche pre-implementazione.
+
+### 🖼️ Allegati
+- **sketches/**: Sketch iniziali di navigazione e flusso utente.
+- **mockup_mobile/**: Mockup ad alta fedeltà dell'interfaccia mobile (AR, IA, tour, accessibilità).
+- **mockup_web/**: Mockup ad alta fedeltà dell'interfaccia web (dashboard, gestione musei).
 
 ---
 
