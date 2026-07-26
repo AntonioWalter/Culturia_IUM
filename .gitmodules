@@ -1,0 +1,9 @@
+[submodule "implementazione/web"]
+	path = implementazione/web
+	url = https://github.com/Culturia-Suite/CulturiaWeb.git
+[submodule "implementazione/ai"]
+	path = implementazione/ai
+	url = https://github.com/Culturia-Suite/Culturia-AI-Narrator.git
+[submodule "implementazione/mobile"]
+	path = implementazione/mobile
+	url = https://github.com/Gdp2004/Culturia_Mobile.git
