@@ -1,0 +1,21 @@
+\section{Miglioramenti apportati al sistema rispetto al prototipo}
+
+In questa sezione verranno descritti i miglioramenti, le scelte implementative e le differenze architetturali apportate ai sistemi. Mentre una specifica miglioria deriva dai test eseguiti con il metodo del "Mago di Oz", le restanti innovazioni sono scaturite organicamente durante la fase di sviluppo, grazie all'analisi continua delle esigenze dell'utente finale.
+
+\subsection{Miglioramenti sull'Applicazione Mobile}
+Per quanto concerne il frontend dedicato ai turisti e visitatori (App Mobile), l'implementazione si è concentrata sull'ottimizzazione dell'esperienza di interazione spaziale e conversazionale:
+\begin{itemize}
+    \item \textbf{Doppia interazione in Realtà Aumentata (AR):} Sulla base delle evidenze emerse specificamente nei precedenti test del Mago di Oz, è stata implementata e affinata una doppia modalità di interazione in ambiente AR. Questo accorgimento permette all'utente di avere un controllo maggiore sugli elementi tridimensionali senza causare sovraccarico cognitivo.
+    \item \textbf{Integrazione Chatbot in AR:} Analizzando le necessità degli utenti in fase di implementazione, è stata inserita la possibilità di richiamare ed interagire con l'assistente conversazionale (Chatbot IA) direttamente dalla scena in Realtà Aumentata. Questo azzera i tempi di switch tra mappa, fotocamera e chat, mantenendo un'immersività costante.
+\end{itemize}
+
+\subsection{Miglioramenti sul Portale Gestionale Web}
+Il lavoro di sviluppo reale del Web Frontend e del Backend ha permesso di portare alla luce e risolvere criticità strutturali non visibili nei semplici wireframe, portando ai seguenti miglioramenti concreti per l'usabilità degli amministratori:
+\begin{itemize}
+    \item \textbf{Gestione della Pagina Pubblica dell'Ente Culturale:} È stata realizzata un'ulteriore schermata atta a configurare e personalizzare la pagina pubblica per ogni ente (es. musei, comuni) direttamente dal portale Web. Questa pagina fungerà da vetrina ufficiale per i turisti sull'App Mobile. Poiché tale visualizzazione non è ancora integrata nell'attuale prototipo Mobile, il suo rendering finale lato visitatore è pianificato come imminente sviluppo futuro.
+    \item \textbf{Separazione Logica delle Fonti (Tour vs Chatbot):} Durante l'implementazione è emerso che unificare i documenti caricati creava conflitti di generazione. Per migliorare nettamente l'usabilità del sistema per il curatore museale o il tecnico comunale, è stata separata la logica di caricamento dei PDF: ora vi è un flusso dedicato al Chatbot e uno esclusivamente dedicato ai Tour. Questa semplificazione delle logiche garantisce all'operatore maggiore controllo, addestramenti più precisi e un rischio di confusione quasi nullo.
+\end{itemize}
+
+\subsection{Sviluppi Futuri: Portale di Verifica delle Fonti}
+La fase di sviluppo ha fatto emergere una chiara problematica: l'affidabilità storica dei contenuti generati dall'Intelligenza Artificiale a partire dai documenti caricati. 
+Per mitigare il rischio di "allucinazioni storiche", come successiva scelta implementativa strategica sarà previsto un \textbf{Portale di Verifica delle Fonti}. Questo ambiente sarà accessibile a storici dell'arte ed esperti di dominio del settore, i quali avranno il compito di revisionare, validare o scartare i contenuti generati prima che vengano resi definitivi e fruibili ai turisti.
